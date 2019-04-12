@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  start_date: 2019-04-11 20:11:31
+  ending_date: 2019-04-11 20:11:31
+
+two:
+  user: two
+  start_date: 2019-04-11 20:11:31
+  ending_date: 2019-04-11 20:11:31

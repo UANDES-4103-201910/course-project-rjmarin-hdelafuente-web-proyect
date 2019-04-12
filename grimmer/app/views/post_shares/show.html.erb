@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Post:</strong>
+  <%= @post_share.post %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @post_share.user %>
+</p>
+
+<%= link_to 'Edit', edit_post_share_path(@post_share) %> |
+<%= link_to 'Back', post_shares_path %>
