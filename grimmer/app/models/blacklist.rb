@@ -1,14 +1,14 @@
 class Blacklist < ApplicationRecord
   belongs_to :user
 
-  before_create :check_email
+  before_create :check_dates
   private
-  def check_email
-    if email =~ /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-      return true
-    else
-      errors.add(:email, "not a valid email")
+  def check_dates
+    if start_date > ending_date
+      errors.add(:start_date, "start date must be before ending date")
       return false
+    else
+      return true
     end
   end
 end
