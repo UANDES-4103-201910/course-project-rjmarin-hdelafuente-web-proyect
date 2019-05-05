@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_12_003810) do
+ActiveRecord::Schema.define(version: 2019_05_05_225816) do
 
   create_table "bans", force: :cascade do |t|
     t.integer "user_id"
@@ -113,6 +113,8 @@ ActiveRecord::Schema.define(version: 2019_04_12_003810) do
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "last_name"
     t.index ["user_id"], name: "index_user_profiles_on_user_id"
   end
 
