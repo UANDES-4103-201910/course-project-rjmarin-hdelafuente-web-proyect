@@ -1,34 +1,71 @@
 <p id="notice"><%= notice %></p>
+<style>
+  .fakeimg {
+    height: 180px;
+    width: 200px;
+    background: #aaa;
+  }
+</style>
+<div class="container">
+  <div class="card-body bg-light">
 
-<p>
-  <strong>User:</strong>
-  <%= @user_profile.user %>
-</p>
+    <div class="fakeimg">
+      <p class="text-center">Profile Picture</p>
+    </div>
 
-<p>
-  <strong>Bio:</strong>
-  <%= @user_profile.bio %>
-</p>
+    <p class="text-lg-center" style="font-size: 30px"><%= @user_profile.name %> <%= @user_profile.last_name %></p>
 
-<p>
-  <strong>City:</strong>
-  <%= @user_profile.city %>
-</p>
+    <p>
+      <strong>Email: </strong>
+      <%= @user_profile.user.email %>
+    </p>
 
-<p>
-  <strong>Country:</strong>
-  <%= @user_profile.country %>
-</p>
+  </div>
 
-<p>
-  <strong>Profile picture:</strong>
-  <%= @user_profile.profile_picture %>
-</p>
+  <div class="card-body bg-light" style="margin-top: 20px">
 
-<p>
-  <strong>Location:</strong>
-  <%= @user_profile.location %>
-</p>
+    <%= button_to 'Edit Info', edit_user_profile_path(@user_profile), :class => "btn btn-sm btn-outline-primary", :method => "get"%>
 
-<%= link_to 'Edit', edit_user_profile_path(@user_profile) %> |
-<%= link_to 'Back', user_profiles_path %>
+    <p class="text-center">
+      <strong>About me</strong>
+      <br>
+      <%= @user_profile.bio %>
+    </p>
+
+    <p class="text-center">
+      <strong>City</strong>
+      <br>
+      <%= @user_profile.city %>
+    </p>
+
+    <p class="text-center">
+      <strong>Country</strong>
+      <br>
+      <%= @user_profile.country %>
+    </p>
+
+  </div>
+
+  <div class="card-body bg-light" style="margin-top: 20px">
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Dec 7, 2017</h5>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <div class="fakeimg">Fake Image</div>
+    <div >
+      <button class="btn btn-link">Like</button>
+      <button class="btn btn-link">DisLike</button>
+      <button class="btn btn-link">Report</button>
+      <button class="btn btn-link">Share</button>
+      <button class="btn btn-link">Follow</button>
+    </div>
+    <div class="input-group " style="margin-top:30px">
+      <input type="text" class="form-control" placeholder="Comment">
+      <div class="input-group-append">
+        <button class="btn btn-primary" type="submit">comment</button>
+      </div>
+    </div>
+    <div class=" card card-body " style="margin-top:10px">
+      <h5>Sarah Dowd:</h5>Comment of Sarah
+    </div>
+  </div>
+</div>

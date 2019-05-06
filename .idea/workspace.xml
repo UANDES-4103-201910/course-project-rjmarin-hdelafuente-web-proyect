@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49dec17b-2daa-45a5-89bb-e805afa41ad4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/grimmer/app/controllers/index_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/views/index/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/views/posts/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/views/posts/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/views/users/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/views/users/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/views/users/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/views/users/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grimmer/app/views/user_profiles/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/views/user_profiles/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grimmer/app/views/user_profiles/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/views/user_profiles/show.html.erb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +13,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grimmer/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
@@ -29,20 +22,36 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/index_controller.rb">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grimmer/app/views/user_profiles/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+            <state relative-caret-position="844">
+              <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grimmer/app/views/user_profiles/show.html.erb">
+        <entry file="file://$PROJECT_DIR$/grimmer/app/views/posts/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="615">
+              <caret line="65" column="12" lean-forward="true" selection-start-line="44" selection-start-column="6" selection-end-line="65" selection-end-column="12" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grimmer/app/views/user_profiles/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="750">
+              <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -51,15 +60,6 @@
         <entry file="file://$PROJECT_DIR$/grimmer/db/schema.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1121" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grimmer/db/migrate/20190505225816_add_names_to_profiles.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-            </state>
           </provider>
         </entry>
       </file>
@@ -81,7 +81,6 @@
         <option value="$PROJECT_DIR$/grimmer/app/models/user.rb" />
         <option value="$PROJECT_DIR$/grimmer/app/models/blacklist.rb" />
         <option value="$PROJECT_DIR$/grimmer/app/views/header.html" />
-        <option value="$PROJECT_DIR$/grimmer/app/views/posts/index.html.erb" />
         <option value="$PROJECT_DIR$/grimmer/app/controllers/login.rb" />
         <option value="$PROJECT_DIR$/grimmer/config/routes.rb" />
         <option value="$PROJECT_DIR$/grimmer/app/views/layouts/application.html.erb" />
@@ -90,12 +89,14 @@
         <option value="$PROJECT_DIR$/grimmer/app/views/user_profiles/new.html.erb" />
         <option value="$PROJECT_DIR$/grimmer/app/views/users/new.html.erb" />
         <option value="$PROJECT_DIR$/grimmer/app/views/users/_form.html.erb" />
-        <option value="$PROJECT_DIR$/grimmer/app/views/user_profiles/show.html.erb" />
         <option value="$PROJECT_DIR$/grimmer/db/migrate/20190505225816_add_names_to_profiles.rb" />
+        <option value="$PROJECT_DIR$/grimmer/app/views/posts/index.html.erb" />
+        <option value="$PROJECT_DIR$/grimmer/app/views/user_profiles/_form.html.erb" />
+        <option value="$PROJECT_DIR$/grimmer/app/views/user_profiles/show.html.erb" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="290" />
     <option name="y" value="53" />
     <option name="width" value="1400" />
@@ -169,13 +170,6 @@
               <item name="grimmer" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="course-project-rjmarin-hdelafuente-web-proyect" type="b2602c69:ProjectViewProjectNode" />
-              <item name="course-project-rjmarin-hdelafuente-web-proyect" type="462c0819:PsiDirectoryNode" />
-              <item name="grimmer" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="migrate" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -232,6 +226,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/grimmer/app/views/layouts" />
       <recent name="$PROJECT_DIR$/grimmer/app/views/index" />
     </key>
   </component>
@@ -264,12 +259,12 @@
       <workItem from="1555584255655" duration="410000" />
       <workItem from="1555706825652" duration="12000" />
       <workItem from="1557069372951" duration="2037000" />
-      <workItem from="1557074264152" duration="6036000" />
+      <workItem from="1557074264152" duration="11319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11704000" />
+    <option name="totallyTimeSpent" value="16987000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="61" y="25" width="1859" height="1055" extended-state="6" />
@@ -287,7 +282,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32937366" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -392,9 +387,6 @@
         <state relative-caret-position="-760" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/views/posts/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/post_attachments_controller.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -405,20 +397,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/views/index/login.html.erb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/grimmer/app/views/user_profiles/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/views/users/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" selection-start-column="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -435,20 +417,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/index_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grimmer/db/migrate/20190412003810_change_column_name.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -458,11 +426,6 @@
     <entry file="file://$PROJECT_DIR$/grimmer/db/migrate/20190412001634_create_geofences.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1121" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grimmer/db/migrate/20190505225816_add_names_to_profiles.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -470,10 +433,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/views/user_profiles/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/grimmer/app/views/users/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/views/posts/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/views/index/login.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/Gemfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1121" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/views/user_profiles/_user_profile.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/index_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -481,6 +468,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/views/user_profiles/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="48" column="59" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/views/posts/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="65" column="12" lean-forward="true" selection-start-line="44" selection-start-column="6" selection-end-line="65" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/views/user_profiles/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="844">
+          <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
