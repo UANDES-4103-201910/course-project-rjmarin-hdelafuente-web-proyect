@@ -23,20 +23,20 @@ count = 1
 peoples = []
 posts=[]
 first_names.each {|f|
-    people = {name: f}
     last_names.each {|l|
+      people = {name: f}
       people["last_name"] = l
-      email_number =rand(2)
+      email_number =rand(3)
       email = f.downcase + l.downcase  + emails[email_number]
       user = User.create(email:email,password:password,user_type:"user")
-      city_number = rand(4)
+      city_number = rand(5)
       people["city"] = cities[city_number]
       people["country"] = "Chile"
       people["bio"] = "hello my name is " + f
       people["user_id"] = count
-
+      p = UserProfile.create(people)
       titles.each {|t|
-        desc_number= rand(2)
+        desc_number= rand(3)
         desc = descrp[desc_number]
         status = true
         visibility = true
@@ -47,16 +47,17 @@ first_names.each {|f|
 
       }
       count = count +1
-
-
       peoples.push(people)
-p = UserProfile.create(peoples)
+    }
+}
+
+
 count1 = 1
 posts.each {|p|
-    people1 = rand(peoples.length-1)
-    people2 = rand(peoples.length-1)
-    c_number = comment[rand(3)]
-    c_number1 = comment[rand(3)]
+    people1 = rand(peoples.length)
+    people2 = rand(peoples.length)
+    c_number = comment[rand(4)]
+    c_number1 = comment[rand(4)]
     c1 = PostComment.create(user_id:people1,post_id:count1,comment:c_number)
     c2 = PostComment.create(user_id:people2,post_id:count1,comment:c_number1)
     count1 = count1+1
@@ -70,13 +71,4 @@ posts.each {|p|
 
 
 
-
-
-
-
-
-
-
-    }
-}
 
