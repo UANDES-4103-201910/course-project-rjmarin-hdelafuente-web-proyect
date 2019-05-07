@@ -7,16 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 srand 1234
 #USERSS
-first_names = ['Hugo', 'Raimundo','Manuel','Camila','Tomas','Benjamin','Erich','Claudio','Pedro','Alfonso','Nicolas']
-last_names = ['Fuente','Marin','Zampighi', 'Fuchs', 'Castro','Piecha','Grand', 'Zuñiga','Calaf','Marchant']
+first_names = ['Hugo', 'Raimundo','Manuel','Camila','Claudio','Pedro','Alfonso']
+last_names = ['Marin','Zampighi', 'Fuchs', 'Castro','Piecha','Grand', 'Zuñiga']
 emails = ['@gmail.com', '@uandes.cl','@hotmail.com']
 cities = ['Santiago', 'Copiapo', 'Villarica','Temuco', 'Talca']
 #only 1 country(Chile)
 password = '1234567890'
 #POSTSS
+two = [1,2]
 # tittles with i hate
-titles = ['chilean food', 'china people', 'dogs', 'cats', 'marihuana','drunk people', 'sushi']
-descrp= [', because im a hater', ', because they are all  idiots' , ', because they eat chocolate']
+titles = ['chilean food', 'china people', 'dogs', 'cats','drunk people', 'sushi', 'high people', 'vegetals']
+descrp= [', because im a hater', ', because they are all  idiots' , ', because they eat chocolate', ', because im high']
 #COMMENTSS
 comment= ['good post', ' i hate your post', 'fan 1', 'ok.', 'hi! you are a angel']
 count = 1
@@ -35,8 +36,9 @@ first_names.each {|f|
       people["bio"] = "hello my name is " + f
       people["user_id"] = count
       p = UserProfile.create(people)
-      titles.each {|t|
-        desc_number= rand(3)
+      two.each {|tt|
+        t = titles[rand(8)]
+        desc_number= rand(4)
         desc = descrp[desc_number]
         status = true
         visibility = true

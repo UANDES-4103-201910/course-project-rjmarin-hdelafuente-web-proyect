@@ -12,6 +12,7 @@ class UserProfilesController < ApplicationController
   def show
     @posts = Post.where("user_id", params[:user_id])
 
+
   end
 
   # GET /user_profiles/new
