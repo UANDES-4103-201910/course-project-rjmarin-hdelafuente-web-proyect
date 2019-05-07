@@ -10,9 +10,7 @@ class UserProfilesController < ApplicationController
   # GET /user_profiles/1
   # GET /user_profiles/1.json
   def show
-    @posts = Post.where("user_id =?", params[:id])
-
-
+    @posts = Post.where('user_id = ?', params[:id])
   end
 
   # GET /user_profiles/new
