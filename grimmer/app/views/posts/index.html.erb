@@ -35,24 +35,23 @@
               <input type="file" class="form-control-file border">
             </div>
             <div class="form-check-inline">
-              <button class="btn btn-success" style="margin-left: 215px" type="submit">Post</button>
+              <button class="btn btn-primary" style="margin-left: 215px" type="submit">Post</button>
             </div>
           </div>
         </div>
 
         <br>
+      <% @posts.each do |post| %>
         <div class="card-header">
-          <h6 style="text-align: right">Date</h6>
+          <h6 style="text-align: right"><%=post.update_at %></h6>
           <div>
             <button class="btn btn-link" style="float: right">location</button>
-            <h5>User1</h5>
-
+            <h5><%=UserProfile.select("name").where("id", post.user_id)[0]%></h5>
           </div>
         </div>
-
         <div class="card-body bg-light">
-        <h2>TITLE HEADING</h2>
-        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        <h2><%= post.title%></h2>
+        <p><%=post.description %></p>
           <div class="fakeimg">Fake Image</div>
           <div style="margin-top: 15px" >
             <button class="btn btn-info">Like</button>
@@ -67,10 +66,14 @@
               <button class="btn btn-success" type="submit">comment</button>
             </div>
           </div>
+          <%comments = PostComment.where("post_id", post.id) %>
+          <%comments.each do |comment| %>
           <div class=" card card-body " style="margin-top:10px">
-            <h5>Sarah Dowd:</h5>Comment of Sarah
+            <h5><%=UserProfile.select("name").where("id", comment.user_id)[0] %>:</h5><%=comment.comment %>
           </div>
+            <%end %>
         </div>
+        <%end %>
 
         <br>
 

@@ -7,36 +7,38 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 srand 1234
 #USERSS
-first_names = ['Hugo', 'Raimundo','Manuel','Camila','Tomas','Benjamin','Erich','Claudio','Pedro','Alfonso','Nicolas']
-last_names = ['Fuente','Marin','Zampighi', 'Fuchs', 'Castro','Piecha','Grand', 'Zuñiga','Calaf','Marchant']
+first_names = ['Hugo', 'Raimundo','Manuel','Camila','Claudio','Pedro','Alfonso']
+last_names = ['Marin','Zampighi', 'Fuchs', 'Castro','Piecha','Grand', 'Zuñiga']
 emails = ['@gmail.com', '@uandes.cl','@hotmail.com']
 cities = ['Santiago', 'Copiapo', 'Villarica','Temuco', 'Talca']
 #only 1 country(Chile)
 password = '1234567890'
 #POSTSS
+two = [1,2]
 # tittles with i hate
-titles = ['chilean food', 'china people', 'dogs', 'cats', 'marihuana','drunk people', 'sushi']
-descrp= [', because im a hater', ', because they are all  idiots' , ', because they eat chocolate']
+titles = ['chilean food', 'china people', 'dogs', 'cats','drunk people', 'sushi', 'high people', 'vegetals']
+descrp= [', because im a hater', ', because they are all  idiots' , ', because they eat chocolate', ', because im high']
 #COMMENTSS
 comment= ['good post', ' i hate your post', 'fan 1', 'ok.', 'hi! you are a angel']
 count = 1
 peoples = []
 posts=[]
 first_names.each {|f|
-    people = {name: f}
     last_names.each {|l|
+      people = {name: f}
       people["last_name"] = l
-      email_number =rand(2)
+      email_number =rand(3)
       email = f.downcase + l.downcase  + emails[email_number]
       user = User.create(email:email,password:password,user_type:"user")
-      city_number = rand(4)
+      city_number = rand(5)
       people["city"] = cities[city_number]
       people["country"] = "Chile"
       people["bio"] = "hello my name is " + f
       people["user_id"] = count
-
-      titles.each {|t|
-        desc_number= rand(2)
+      p = UserProfile.create(people)
+      two.each {|tt|
+        t = titles[rand(8)]
+        desc_number= rand(4)
         desc = descrp[desc_number]
         status = true
         visibility = true
@@ -47,36 +49,33 @@ first_names.each {|f|
 
       }
       count = count +1
-
-
       peoples.push(people)
-p = UserProfile.create(peoples)
+    }
+}
+
+
 count1 = 1
 posts.each {|p|
-    people1 = rand(peoples.length-1)
-    people2 = rand(peoples.length-1)
-    c_number = comment[rand(3)]
-    c_number1 = comment[rand(3)]
+    people1 = rand(peoples.length)
+    people2 = rand(peoples.length)
+    c_number = comment[rand(4)]
+    c_number1 = comment[rand(4)]
     c1 = PostComment.create(user_id:people1,post_id:count1,comment:c_number)
     c2 = PostComment.create(user_id:people2,post_id:count1,comment:c_number1)
     count1 = count1+1
 
-
-
 }
+count1 = 1
+peoples.each do |p|
+  post = rand(count1+1)
+  count1 = count1+1
+  v = PostVote.create(post_id: post, user_id:count1,vote: true)
+
+end
 
 
 
 
 
 
-
-
-
-
-
-
-
-    }
-}
 
