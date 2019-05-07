@@ -64,9 +64,14 @@ posts.each {|p|
     c2 = PostComment.create(user_id:people2,post_id:count1,comment:c_number1)
     count1 = count1+1
 
-
-
 }
+count1 = 1
+peoples.each do |p|
+  post = rand(count1+1)
+  count1 = count1+1
+  v = PostVote.create(post_id: post, user_id:count1,vote: true)
+
+end
 
 
 
