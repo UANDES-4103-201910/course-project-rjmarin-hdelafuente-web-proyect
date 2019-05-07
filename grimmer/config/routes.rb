@@ -8,9 +8,10 @@ Rails.application.routes.draw do
   resources :post_shares
   resources :post_comments
   resources :post_attachments
-  resources :posts
+  defaults format: :json do
+    resources :users, :posts
+  end
   resources :user_profiles
-  resources :users
   root 'posts#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
