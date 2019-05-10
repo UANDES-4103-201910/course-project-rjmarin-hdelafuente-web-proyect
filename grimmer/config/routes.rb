@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :my_posts
   resources :popular_posts
   resources :admin
-  root 'index#login'
+  resources :registrations
+  root 'new#registrations'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
