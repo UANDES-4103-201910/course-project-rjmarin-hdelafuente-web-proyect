@@ -18,6 +18,6 @@ Rails.application.routes.draw do
   resources :popular_posts
   resources :admin
   resources :registrations
-  root 'new#registrations'
+  root 'registrations#new'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
