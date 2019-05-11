@@ -25,7 +25,6 @@
         <button class="btn btn-success" type="submit">comment</button>
       </div>
     </div>
-
     <%comments = PostComment.where("post_id= ?", post.id ) %>
     <%comments.each do |comment| %>
       <%if(comment.post_id == post.id) %>
