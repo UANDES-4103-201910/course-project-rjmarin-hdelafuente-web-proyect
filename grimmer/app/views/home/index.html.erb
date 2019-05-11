@@ -45,8 +45,6 @@
                 <h2><%= post.title%></h2>
                 <p><%=post.description %></p>
                 <div class="fakeimg">
-                  <%pa = PostAttachment.where("post_id = ?",post.id)[0] %>
-                 <%=image_tag pa.attachment%>
                 </div>
                 <div style="margin-top: 15px" >
                     <button class="btn btn-info"><%=PostVote.where("post_id = ? AND vote = ?",post.id,true).count %> Like</button>
