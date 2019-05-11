@@ -47,6 +47,7 @@ first_names.each {|f|
                            country:"Chile",status:status,visibility:visibility)
         posts.push(post)
 
+
       }
       count = count +1
       peoples.push(people)
@@ -56,6 +57,8 @@ first_names.each {|f|
 
 count1 = 1
 posts.each {|p|
+    attachment = "download.jpeg"
+    p_a = PostAttachment.create(post_id: count1, attachment:attachment)
     people1 = rand(peoples.length)
     people2 = rand(peoples.length)
     c_number = comment[rand(4)]
@@ -68,8 +71,15 @@ posts.each {|p|
 count1 = 1
 peoples.each do |p|
   post = rand(count1+1)
-  count1 = count1+1
+  dv = rand(20)
+  sh = rand(20)
   v = PostVote.create(post_id: post, user_id:count1,vote: true)
+  down = PostVote.create(post_id: post+dv , user_id:count1,vote: false)
+  share = PostShare.create(post_id:post+sh, user_id:count1)
+  count1 = count1+1
+  if (count1%10 ==0)
+    rpt= PostReport.create(post_id:post,user_id:count1,comment_report:"ofense")
+  end
 
 end
 
