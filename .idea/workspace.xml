@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49dec17b-2daa-45a5-89bb-e805afa41ad4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/grimmer/config/local_env.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grimmer/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grimmer/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/views/layouts/google_logged_in.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/views/layouts/google_logged_in.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/config/application.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/config/environments/development.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/config/initializers/devise.rb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/config/initializers/devise.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,13 +67,18 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/grimmer/Gemfile">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+                <state relative-caret-position="345">
+                  <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/grimmer/app/models/ability.rb">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/grimmer/app/models/user.rb">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="300">
@@ -133,7 +131,6 @@
         <option value="$PROJECT_DIR$/grimmer/app/controllers/callbacks_controller.rb" />
         <option value="$PROJECT_DIR$/grimmer/config/routes.rb" />
         <option value="$PROJECT_DIR$/grimmer/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/grimmer/Gemfile" />
         <option value="$PROJECT_DIR$/grimmer/README.md" />
         <option value="$PROJECT_DIR$/grimmer/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/grimmer/config/local_env.yml" />
@@ -142,6 +139,7 @@
         <option value="$PROJECT_DIR$/grimmer/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/grimmer/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/grimmer/app/views/layouts/google_logged_in.html.erb" />
+        <option value="$PROJECT_DIR$/grimmer/Gemfile" />
       </list>
     </option>
   </component>
@@ -180,6 +178,13 @@
               <item name="grimmer" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="course-project-rjmarin-hdelafuente-web-proyect" type="b2602c69:ProjectViewProjectNode" />
+              <item name="course-project-rjmarin-hdelafuente-web-proyect" type="462c0819:PsiDirectoryNode" />
+              <item name="grimmer" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="course-project-rjmarin-hdelafuente-web-proyect" type="b2602c69:ProjectViewProjectNode" />
@@ -304,12 +309,12 @@
       <workItem from="1557326540125" duration="22000" />
       <workItem from="1557327368765" duration="661000" />
       <workItem from="1557492031673" duration="65000" />
-      <workItem from="1558903027207" duration="8948000" />
+      <workItem from="1558903027207" duration="9030000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40472000" />
+    <option name="totallyTimeSpent" value="40554000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="61" y="25" width="1859" height="1055" extended-state="6" />
@@ -361,9 +366,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grimmer/db/migrate/20190412001634_create_geofences.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/grimmer/db/migrate/20190505225816_add_names_to_profiles.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -579,13 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grimmer/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -648,6 +643,16 @@
           <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/models/ability.rb">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
