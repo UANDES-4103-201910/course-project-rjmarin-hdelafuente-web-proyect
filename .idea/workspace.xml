@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49dec17b-2daa-45a5-89bb-e805afa41ad4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/grimmer/app/views/layouts/google_logged_in.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/course-project-rjmarin-hdelafuente-web-proyect.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/course-project-rjmarin-hdelafuente-web-proyect.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grimmer/config/local_env.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grimmer/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grimmer/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/controllers/sessions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/controllers/sessions_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grimmer/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grimmer/app/views/layouts/google_logged_in.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/views/layouts/google_logged_in.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grimmer/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/config/application.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grimmer/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/config/environments/development.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grimmer/config/initializers/devise.rb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/config/initializers/devise.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.48175675">
+    <splitter split-orientation="horizontal" split-proportion="0.48108107">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -52,13 +50,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/grimmer/app/views/layouts/application.html.erb">
+            <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/sessions_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="555">
-                  <caret line="37" column="10" lean-forward="true" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
+                <state relative-caret-position="525">
+                  <caret line="35" column="3" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
                 </state>
               </provider>
             </entry>
@@ -77,23 +72,19 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/grimmer/app/models/user.rb">
+            <entry file="file://$PROJECT_DIR$/grimmer/Gemfile">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+                <state relative-caret-position="315">
+                  <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/grimmer/app/views/layouts/google_logged_in.html.erb">
+            <entry file="file://$PROJECT_DIR$/grimmer/app/models/user.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="720">
-                  <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
-                  <folding>
-                    <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
+                <state relative-caret-position="300">
+                  <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
                 </state>
               </provider>
             </entry>
@@ -133,19 +124,23 @@
         <option value="$PROJECT_DIR$/grimmer/app/views/user_profiles/show.html.erb" />
         <option value="$PROJECT_DIR$/grimmer/app/views/admin/admin_home.html.erb" />
         <option value="$PROJECT_DIR$/grimmer/app/controllers/admin_controller.rb" />
-        <option value="$PROJECT_DIR$/grimmer/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/grimmer/app/views/my_posts/index.html.erb" />
         <option value="$PROJECT_DIR$/grimmer/app/views/admin/index.html.erb" />
-        <option value="$PROJECT_DIR$/grimmer/Gemfile" />
         <option value="$PROJECT_DIR$/grimmer/db/migrate/20190526212332_add_devise_to_users.rb" />
         <option value="$PROJECT_DIR$/grimmer/app/controllers/sessions_controller.rb" />
-        <option value="$PROJECT_DIR$/grimmer/config/initializers/devise.rb" />
         <option value="$PROJECT_DIR$/grimmer/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/grimmer/app/views/index/login.html.erb" />
         <option value="$PROJECT_DIR$/grimmer/app/controllers/callbacks_controller.rb" />
         <option value="$PROJECT_DIR$/grimmer/config/routes.rb" />
         <option value="$PROJECT_DIR$/grimmer/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/grimmer/Gemfile" />
+        <option value="$PROJECT_DIR$/grimmer/README.md" />
+        <option value="$PROJECT_DIR$/grimmer/config/environments/development.rb" />
+        <option value="$PROJECT_DIR$/grimmer/config/local_env.yml" />
+        <option value="$PROJECT_DIR$/grimmer/config/application.rb" />
+        <option value="$PROJECT_DIR$/grimmer/config/initializers/devise.rb" />
         <option value="$PROJECT_DIR$/grimmer/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/grimmer/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/grimmer/app/views/layouts/google_logged_in.html.erb" />
       </list>
     </option>
@@ -199,7 +194,21 @@
               <item name="grimmer" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="course-project-rjmarin-hdelafuente-web-proyect" type="b2602c69:ProjectViewProjectNode" />
+              <item name="course-project-rjmarin-hdelafuente-web-proyect" type="462c0819:PsiDirectoryNode" />
+              <item name="grimmer" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="course-project-rjmarin-hdelafuente-web-proyect" type="b2602c69:ProjectViewProjectNode" />
+              <item name="course-project-rjmarin-hdelafuente-web-proyect" type="462c0819:PsiDirectoryNode" />
+              <item name="grimmer" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -295,12 +304,12 @@
       <workItem from="1557326540125" duration="22000" />
       <workItem from="1557327368765" duration="661000" />
       <workItem from="1557492031673" duration="65000" />
-      <workItem from="1558903027207" duration="4416000" />
+      <workItem from="1558903027207" duration="8948000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35940000" />
+    <option name="totallyTimeSpent" value="40472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="61" y="25" width="1859" height="1055" extended-state="6" />
@@ -352,33 +361,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/post_attachments_controller.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/login_controller.rb" />
-    <entry file="file://$PROJECT_DIR$/grimmer/app/views/user_profiles/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/views/users/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/views/users/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/db/migrate/20190412003810_change_column_name.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/db/migrate/20190412000603_create_post_comments.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/grimmer/db/migrate/20190412001634_create_geofences.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -400,12 +382,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/grimmer/app/views/post_comments/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/views/layouts/mailer.html.erb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/views/layouts/mailer.text.erb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/grimmer/app/views/user_profiles/_form.html.erb">
@@ -509,20 +485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/config/initializers/devise.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grimmer/app/views/admin/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -540,20 +502,6 @@
     <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/callbacks_controller_controller.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/views/index/login.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/admin_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -563,13 +511,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grimmer/db/migrate/20190526214743_add_name_to_users.rb">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/callbacks_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
@@ -585,10 +526,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/models/user.rb">
+    <entry file="file://$PROJECT_DIR$/grimmer/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="210">
+            <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        <state relative-caret-position="-11">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/views/layouts/mailer.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/views/layouts/mailer.text.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/config/cable.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/config/storage.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="45" column="3" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/config/initializers/devise.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="71" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/views/home/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/config/local_env.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="41" lean-forward="true" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -599,6 +607,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/views/layouts/google_logged_in.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/views/index/login.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/admin_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/sessions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -606,31 +642,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/views/home/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/grimmer/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/views/layouts/google_logged_in.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="10" lean-forward="true" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="300">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
         </state>
       </provider>
     </entry>

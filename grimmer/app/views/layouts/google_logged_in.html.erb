@@ -17,11 +17,11 @@
   <div id="navb" class="navbar-collapse collapse hide">
     <%if  User.find(session["warden.user.user.key"][0][0]).name%>
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="/user_profiles/20">My Account</a>
+            <%= link_to "My Profile", user_profile_path(:id => session["warden.user.user.key"][0][0]), method: :get, :class=>"nav-link" %>
         </li>
         <li class="nav-item">
           <a class="nav-link " href="/my_posts">My Posts</a>
@@ -33,7 +33,7 @@
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        <%= link_to "Log Out", log_out_path, method: :delete %>
+        <%= link_to "Log Out", log_out_path, method: :delete, :class=>"nav-link" %>
       </form>
     <%end %>
 

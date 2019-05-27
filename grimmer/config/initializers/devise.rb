@@ -14,5 +14,5 @@ Devise.setup do |config|
   config.password_length = 8..128
   config.reset_password_within = 6.hours
   config.sign_out_via = :delete
-  config.omniauth :google_oauth2, '801587855890-toce8kjf9qbolhlaq1f0k015ds5sabla.apps.googleusercontent.com', 'HBBycS1-tu_o-NdRIR1xmhr9', {}
+  config.omniauth :google_oauth2, ENV["GOOGLE_KEY"], ENV["GOOGLE_SECRET"], {}
 end
