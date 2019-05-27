@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: { :omniauth_callbacks => "callbacks" }
   resources :geofences
   resources :bans
   resources :dumpsters
@@ -17,8 +18,13 @@ Rails.application.routes.draw do
   resources :my_posts
   resources :popular_posts
   resources :admin
-  resources :registrations
   root 'home#index'
+
+  post '/login',   to: 'sessions#create', as: :log_in
+  delete '/log_out' => 'sessions#destroy', as: :log_out
+
+  get '/sign_in' => 'registrations#new', as: :registrations
+  post '/sign_in' => 'registrations#create', as: :sign_in
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
