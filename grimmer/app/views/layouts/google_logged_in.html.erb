@@ -15,7 +15,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div id="navb" class="navbar-collapse collapse hide">
-    <%if  User.find(session["warden.user.user.key"][0][0]).name%>
+    <%if  User.find(session["warden.user.user.key"][0][0]).name or current_user%>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
