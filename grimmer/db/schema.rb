@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_26_214743) do
+ActiveRecord::Schema.define(version: 2019_05_05_225816) do
 
   create_table "bans", force: :cascade do |t|
     t.integer "user_id"
@@ -48,6 +48,8 @@ ActiveRecord::Schema.define(version: 2019_05_26_214743) do
     t.text "attachment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "avatar"
+    t.string "avatars"
     t.index ["post_id"], name: "index_post_attachments_on_post_id"
   end
 
