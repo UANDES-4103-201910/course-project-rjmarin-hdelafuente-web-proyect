@@ -26,5 +26,3 @@ class ApplicationController < ActionController::Base
     if session["warden.user.user.key"] then true else false end
   end
 end
-
-

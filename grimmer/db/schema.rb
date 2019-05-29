@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_05_225816) do
+ActiveRecord::Schema.define(version: 2019_05_28_190805) do
 
   create_table "bans", force: :cascade do |t|
     t.integer "user_id"
@@ -140,6 +140,7 @@ ActiveRecord::Schema.define(version: 2019_05_05_225816) do
     t.string "oauth_token"
     t.datetime "oauth_expires_at"
     t.string "name"
+    t.string "admin"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
