@@ -1,5 +1,5 @@
 class PostAttachment < ApplicationRecord
   belongs_to :post
-  #mount_uploaders :avatars, AvatarUploader
-  #serialize :avatars, JSON
+  has_many_attached :avatars
+
 end

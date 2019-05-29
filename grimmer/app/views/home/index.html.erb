@@ -54,18 +54,21 @@
                     <%p_a = PostAttachment.where("post_id = ?",post.id) %>
                       <%p_a.each do| a|%>
                         <% for av in a.avatars do %>
-                          <%name_index = av.to_s.length - av.to_s.reverse.index("/") %>
-                          <%if av.to_s.from(name_index).include? "jpg" or av.to_s.from(name_index).include? "png" or av.to_s.from(name_index).include? "jpeg"%>
-                        <%= link_to av.to_s do%>
-                          <%=image_tag(av.url(:thumb)) %>
+
+                          <%name = av.blob.filename.to_s %>
+                          <%if name.include? "jpg" or name.include? "png" or name.include? "jpeg"%>
+                        <%= link_to url_for(av) do%>
+                          <%=image_tag( av.variant(resize: "200x200>").processed, style: "margin:7px",:class=>"nav-link" )%>
                           <%end %>
                         <%end %>
                         <%end %>
+                    </div>
+                    <div>
                     <% for av in a.avatars do %>
-                      <%name_index = av.to_s.length - av.to_s.reverse.index("/") %>
-                      <%if !(av.to_s.from(name_index).include? "jpg" or av.to_s.from(name_index).include? "png" or av.to_s.from(name_index).include? "jpeg")%>
-                        <button class="btn btn-link" href="<%=av.to_s%>"><%=link_to av.to_s.from(name_index),av.to_s%></button>
-                        <%end %>
+                      <%name = av.blob.filename.to_s %>
+                      <%if !(name.include? "jpg" or name.include? "png" or name.include? "jpeg")%>
+                        <%= link_to(name, rails_blob_path(av, disposition: "attachment"),style: "margin:5px") %>
+                            <%end %>
 
                       <%end %>
                     <%end %>
