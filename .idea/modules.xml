@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/course-project-rjmarin-hdelafuente-web-proyect.iml" filepath="$PROJECT_DIR$/.idea/course-project-rjmarin-hdelafuente-web-proyect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/grimmer.iml" filepath="$PROJECT_DIR$/.idea/modules/grimmer.iml" />
     </modules>
   </component>
 </project>
