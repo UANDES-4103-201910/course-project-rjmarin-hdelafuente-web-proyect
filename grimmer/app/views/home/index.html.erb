@@ -1,4 +1,7 @@
 <% if can? :read, @posts %>
+  <% content_for :custom_js do %>
+    <%= javascript_include_tag "home" %>
+  <% end %>
 <style>
   .fakeimg {
     height: 180px;
@@ -76,8 +79,12 @@
                     <%end %>
                 </div>
                 <div style="margin-top: 15px" >
-                    <button class="btn btn-info"><%=PostVote.where("post_id = ? AND vote = ?",post.id,true).count %> Like</button>
-                    <button class="btn btn-info"><%=PostVote.where("post_id = ? AND vote = ?",post.id,false).count %> DisLike</button>
+                  <%= link_to  like_home_path(post), class: 'vote  btn btn-sm btn-info', method: :put, remote: true do%>
+                    <button class="btn  btn-like" id="like-post-<%=post.id %>"><%=PostVote.where("post_id = ? AND vote = ?",post.id,true).count %> Like</button>
+                  <%end %>
+                  <%= link_to  dislike_home_path(post), class: 'downvote  btn btn-sm btn-info', method: :put, remote: true do%>
+                    <button class="btn  btn-like" id="dislike-post-<%=post.id %>"><%=PostVote.where("post_id = ? AND vote = ?",post.id,false).count %> DisLike</button>
+                  <%end %>
                     <button class="btn btn-info">Report</button>
                     <button class="btn btn-info">Share</button>
                     <button class="btn btn-info">Follow</button>
@@ -138,12 +145,13 @@
                   <div style="margin-top: 15px" >
 
 
-                    <%= link_to "Like", like_home_path(post), class: 'vote', method: :put, remote: true, data: { toggle_text: 'dislike', toggle_href: dislike_home_path(post), id: post.id } %>
-                      <button class="btn btn-info btn-dislike"><%=PostVote.where("post_id = ? AND vote = ?",post.id,true).count %> Like</button>
+                    <%= link_to  like_home_path(post), class: 'vote  btn btn-sm btn-info', method: :put, remote: true do%>
+                      <button class="btn  btn-like" id="like-post-<%=post.id %>"><%=PostVote.where("post_id = ? AND vote = ?",post.id,true).count %> Like</button>
+                      <%end %>
+                    <%= link_to  dislike_home_path(post), class: 'downvote  btn btn-sm btn-info', method: :put, remote: true do%>
+                      <button class="btn  btn-like" id="dislike-post-<%=post.id %>"><%=PostVote.where("post_id = ? AND vote = ?",post.id,false).count %> DisLike</button>
+                    <%end %>
 
-
-
-                    <button class="btn btn-info btn-dislike"><%=PostVote.where("post_id = ? AND vote = ?",post.id,false).count %> DisLike</button>
                     <button class="btn btn-info btn-edit">Edit</button>
                   </div>
                   <div class="input-group " style="margin-top:30px">
@@ -172,7 +180,6 @@
 
         </div>
     </div>
-  <% end %>
 
 </div>
 <% end %>

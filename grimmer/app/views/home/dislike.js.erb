@@ -1,0 +1,5 @@
+$(document).ready(function () {
+  $('.downvote').click(function () {
+      $('#dislike-post-<%=@post.id %>').html("<button  disabled class=\"btn btn-sm btn-info\" id=\"dislike-post-<%=@post.id %>\"><%=PostVote.where("post_id = ? AND vote = ?",@post.id,false).count %> DisLike</button>");
+  });
+});

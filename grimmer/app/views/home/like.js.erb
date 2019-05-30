@@ -1,0 +1,26 @@
+
+$(document).ready(function () {
+    $('.vote').click(function () {
+        $('#like-post-<%=@post.id %>').html("<button  disabled class=\"btn btn-sm btn-info\" id=\"like-post-<%=@post.id %>\"><%=PostVote.where("post_id = ? AND vote = ?",@post.id,true).count %> Like</button>");
+        /*
+        $.ajax({
+            type: 'PUT',
+            url: '/home/<%=@post.id %>/like',
+            success: function(){
+                alert("ajax");
+                $('#like-post-<%=@post.id %>').html("<button class=\"btn btn-sm btn-info\" id=\"like-post-<%=@post.id %>\"><%=PostVote.where("post_id = ? AND vote = ?",@post.id,true).count %> Like</button>");
+
+
+            }
+
+
+        });*/
+
+
+
+    });
+
+});
+
+
+
