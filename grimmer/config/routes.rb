@@ -14,7 +14,12 @@ Rails.application.routes.draw do
   end
   resources :user_profiles
   resources :users
-  resources :home
+  resources :home do
+    member do
+      put "like", to: "home#like"
+      put "dislike", to: "home#dislike"
+    end
+  end
   resources :my_posts
   resources :popular_posts
   resources :admin

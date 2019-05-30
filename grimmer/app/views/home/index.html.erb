@@ -39,12 +39,13 @@
 
             <br>
             <% @posts.each do |post| %>
-
+            <%if post.user_id != session["warden.user.user.key"][0][0] and post.visibility= true %>
             <div class="card-header">
                 <h6 style="text-align: right"><%= post.updated_at%></h6>
                 <div>
                     <button class="btn btn-link" style="float: right">location</button>
-                    <h5><%=UserProfile.select("name").where("user_id=?", post.user_id)[0].name%> <%=UserProfile.select("last_name").where("user_id=?", post.user_id)[0].last_name%></h5>
+                  <%name_user = UserProfile.select("name").where("user_id=?", post.user_id)[0].name + " " + UserProfile.select("last_name").where("user_id=?", post.user_id)[0].last_name%>
+                    <h5><%= link_to name_user, user_profile_path(:id => post.user_id, method: :get, :class=>"btn-primary" )%></h5>
                 </div>
             </div>
             <div class="card-body bg-light">
@@ -98,7 +99,74 @@
                 <%end %>
             </div>
             <br>
+            <%else %>
+              <div class="card-header">
+                <h6 style="text-align: right"><%= post.updated_at%></h6>
+                <div>
+                  <button class="btn btn-link" style="float: right">location</button>
+                  <%name_user = UserProfile.select("name").where("user_id=?", post.user_id)[0].name + " " + UserProfile.select("last_name").where("user_id=?", post.user_id)[0].last_name%>
+                  <h5><%= link_to name_user, user_profile_path(:id => post.user_id, method: :get, :class=>"btn-primary" )%></h5>
+                </div>
+              </div>
+              <div class="card-body bg-light">
+                <h2><%= post.title%></h2>
+                <p><%=post.description %></p>
+                <div >
+                  <%p_a = PostAttachment.where("post_id = ?",post.id) %>
+                  <%p_a.each do| a|%>
+                    <% for av in a.avatars do %>
+
+                      <%name = av.blob.filename.to_s %>
+                      <%if name.include? "jpg" or name.include? "png" or name.include? "jpeg"%>
+                        <%= link_to url_for(av) do%>
+                          <%=image_tag( av.variant(resize: "200x200>").processed, style: "margin:7px",:class=>"nav-link" )%>
+                        <%end %>
+                      <%end %>
+                    <%end %>
+                    </div>
+                    <div>
+                      <% for av in a.avatars do %>
+                        <%name = av.blob.filename.to_s %>
+                        <%if !(name.include? "jpg" or name.include? "png" or name.include? "jpeg")%>
+                          <%= link_to(name, rails_blob_path(av, disposition: "attachment"),style: "margin:5px") %>
+                        <%end %>
+
+                      <%end %>
+                  <%end %>
+                  </div>
+                  <div style="margin-top: 15px" >
+
+
+                    <%= link_to "Like", like_home_path(post), class: 'vote', method: :put, remote: true, data: { toggle_text: 'dislike', toggle_href: dislike_home_path(post), id: post.id } %>
+                      <button class="btn btn-info btn-dislike"><%=PostVote.where("post_id = ? AND vote = ?",post.id,true).count %> Like</button>
+
+
+
+                    <button class="btn btn-info btn-dislike"><%=PostVote.where("post_id = ? AND vote = ?",post.id,false).count %> DisLike</button>
+                    <button class="btn btn-info btn-edit">Edit</button>
+                  </div>
+                  <div class="input-group " style="margin-top:30px">
+                    <input type="text" class="form-control" placeholder="Comment">
+                    <div class="input-group-append">
+                      <button class="btn btn-success" type="submit">comment</button>
+                    </div>
+                  </div>
+
+                  <%comments = PostComment.where("post_id", post.id ) %>
+                  <%comments.each do |comment| %>
+                    <%if(comment.post_id == post.id) %>
+                      <div class=" card card-body " style="margin-top:10px">
+
+                        <h5><%=UserProfile.select("name").where("user_id =?", comment.user_id)[0].name %> <%=UserProfile.select("last_name").where("user_id =?", comment.user_id)[0].last_name %>:</h5><%=comment.comment %>
+                      </div>
+                    <%end %>
+                  <%end %>
+                  </div>
+              <br>
+
             <%end %>
+            <%end %>
+
 
 
         </div>
