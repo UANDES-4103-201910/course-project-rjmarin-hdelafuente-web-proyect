@@ -4,14 +4,16 @@ class User < ApplicationRecord
   attr_accessor :remember_token
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :omniauthable, :trackable
-  has_many :post
+         :omniauthable, :trackable, :authentication_keys => {email: true, login: false},
+         :omniauth_providers => [:google_oauth2]
 
+  has_many :post, :dependent => :destroy
+  has_one :user_profile, :dependent => :destroy
   before_create :check_email
+
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
-      puts("##################")
-      puts(auth.info.name)
+      user.roles_mask = auth.info.roles_mask
       user.email = auth.info.email
       user.password = Devise.friendly_token[0, 20]
       user.provider = auth.provider
@@ -21,6 +23,11 @@ class User < ApplicationRecord
       user.oauth_expires_at = Time.at(auth.credentials.expires_at)
       user.save!
     end
+  end
+
+  ROLES = %w[guest user admin superadmin]
+  def role?(base_role)
+    base_role == ROLES[roles_mask]
   end
 
   # Returns the hash digest of the given string.

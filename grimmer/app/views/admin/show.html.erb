@@ -1,6 +1,7 @@
 <% content_for :custom_js do %>
   <%= javascript_include_tag "admin_external" %>
 <% end %>
+<% if User.find_by(id: session["warden.user.user.key"][0][0]).roles_mask != 1 %>
 <div class="container" style="margin-top: 45px">
   <strong>admin view</strong>
 </div>
@@ -92,24 +93,26 @@
     <thead>
       <strong> User managment</strong>
     <tr>
-        <th style="text-align:center">Id</th>
-        <th style="text-align:center">Email</th>
-        <th></th>
+        <th style="text-align: center">Id</th>
+        <th style="text-align: center">Email</th>
+        <th style="text-align: center"></th>
     </tr>
     </thead>
     <tbody id="user_table_body">
     <% @all_users.each do |user| %>
       <!-- Body -->
       <tr>
-        <td><%= user.id%></td>
+        <td id="user-<%= user.id%>"><%= user.id%></td>
         <td><%= user.email%></td>
         <td>
-          <button class="btn btn-sm-warning" title="Send to blacklist">
+          <%= link_to "", user_profile_path(id: user.id), method: :get, class: 'btn btn-sm btn-primary fas fa-eye', title: 'Go to profile' %>
+          <%= link_to "", edit_admin_path(id: user.id), method: :get, class: 'btn btn-sm btn-primary far fa-edit', title: 'Edit' %>
+          <button class="btn btn-sm btn-warning" title="Send to blacklist">
             <i class="fas fa-share-square"></i>
           </button>
-          <button class="btn btn-sm-danger" title="Delete user">
-            <i class="far fa-trash-alt"></i>
-          </button>
+
+          <a class="btn btn-sm btn-danger far fa-trash-alt"></a>
+          <%= link_to "", user, method: :delete, class: 'btn btn-sm btn-danger far fa-trash-alt', title: 'Delete User', confirm: 'Are you sure?'%>
         </td>
       </tr>
     <% end %>
@@ -118,3 +121,8 @@
 </table>
 </div>
 </div>
+<% else %>
+  <div class="container">
+    <strong>Insufficient permissions! </strong>
+  </div>
+<% end %>
