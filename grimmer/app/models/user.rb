@@ -7,8 +7,8 @@ class User < ApplicationRecord
          :omniauthable, :trackable, :authentication_keys => {email: true, login: false},
          :omniauth_providers => [:google_oauth2]
 
-  has_many :post
-  has_one :user_profile
+  has_many :post, :dependent => :destroy
+  has_one :user_profile, :dependent => :destroy
   before_create :check_email
 
   def self.from_omniauth(auth)

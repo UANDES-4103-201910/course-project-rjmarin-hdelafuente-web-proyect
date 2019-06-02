@@ -17,4 +17,10 @@ function openTab(evt, cityName) {
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
-} 
+}
+
+$(document).ready(function () {
+    $('.btn btn-sm btn-danger far fa-trash-alt').on('click', function(event) {
+        console.log("holaaaaaaaaaaa");
+    });
+});
