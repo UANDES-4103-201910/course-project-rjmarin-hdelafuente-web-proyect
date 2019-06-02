@@ -1,0 +1,24 @@
+<div id="product-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title"><%= title %></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+            </div>
+            <%= form_for @post_report, remote: true do |f| %>
+            <div class="modal-body">
+                <div class="form-group">
+                    <%= f.text_field :comment_report, class: "form-control input-lg", placeholder: "Comment" %>
+                </div>
+            </div>
+            <%= hidden_field_tag :user_id, session["warden.user.user.key"][0][0] %>
+            <%= hidden_field_tag :post_id, @post.id %>
+            <div class="modal-footer">
+                <%= f.submit class: "btn create-report btn-primary btn-lg btn-block" %>
+            </div>
+            <% end %>
+
+        </div>
+    </div>
+</div>

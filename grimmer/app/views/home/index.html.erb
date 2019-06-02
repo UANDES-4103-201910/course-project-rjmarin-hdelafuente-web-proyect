@@ -79,15 +79,18 @@
                     <%end %>
                 </div>
                 <div style="margin-top: 15px" >
-                  <%= link_to  like_home_path(post), class: 'vote  btn btn-sm btn-info', method: :put, remote: true do%>
-                    <button class="btn  btn-like" id="like-post-<%=post.id %>"><%=PostVote.where("post_id = ? AND vote = ?",post.id,true).count %> Like</button>
+                  <%= link_to  like_home_path(post), class: 'vote  btn btn-info btn-sm', method: :put, remote: true do%>
+                    <button class="btn  btn-sm btn-like" id="like-post-<%=post.id %>"><%=PostVote.where("post_id = ? AND vote = ?",post.id,true).count %> Like</button>
                   <%end %>
                   <%= link_to  dislike_home_path(post), class: 'downvote  btn btn-sm btn-info', method: :put, remote: true do%>
-                    <button class="btn  btn-like" id="dislike-post-<%=post.id %>"><%=PostVote.where("post_id = ? AND vote = ?",post.id,false).count %> DisLike</button>
+                    <button class="btn btn-sm btn-dislike" id="dislike-post-<%=post.id %>"><%=PostVote.where("post_id = ? AND vote = ?",post.id,false).count %> DisLike</button>
                   <%end %>
-                    <button class="btn btn-info">Report</button>
-                    <button class="btn btn-info">Share</button>
-                    <button class="btn btn-info">Follow</button>
+                  <%= link_to report_home_path(post),method: :put, remote: true, class: " report btn btn-info btn-sm"  do%>
+                      <button class="btn btn-sm btn-info">Report</button>
+                    <%end %>
+                  <%= link_to follow_home_path(post),method: :put, remote: true, class: " follow btn btn-info btn-sm"  do%>
+                    <button class="btn btn-sm btn-info">Follow</button>
+                  <%end %>
                 </div>
                 <div class="input-group " style="margin-top:30px">
                     <input type="text" class="form-control" placeholder="Comment">
@@ -146,20 +149,29 @@
 
 
                     <%= link_to  like_home_path(post), class: 'vote  btn btn-sm btn-info', method: :put, remote: true do%>
-                      <button class="btn  btn-like" id="like-post-<%=post.id %>"><%=PostVote.where("post_id = ? AND vote = ?",post.id,true).count %> Like</button>
+                      <button class="btn btn-sm btn-like" id="like-post-<%=post.id %>"><%=PostVote.where("post_id = ? AND vote = ?",post.id,true).count %> Like</button>
                       <%end %>
                     <%= link_to  dislike_home_path(post), class: 'downvote  btn btn-sm btn-info', method: :put, remote: true do%>
-                      <button class="btn  btn-like" id="dislike-post-<%=post.id %>"><%=PostVote.where("post_id = ? AND vote = ?",post.id,false).count %> DisLike</button>
+                      <button class="btn btn-sm btn-dislike" id="dislike-post-<%=post.id %>"><%=PostVote.where("post_id = ? AND vote = ?",post.id,false).count %> DisLike</button>
                     <%end %>
+                    <%= button_to "Edit", edit_home_path(post), method: :get, class: "btn btn-info btn-edit" %>
+                    <%= link_to 'Delete Post', post, :method => :delete, class: "btn btn-info btn-destoy",:confirm => "Are you sure?" %>
 
-                    <button class="btn btn-info btn-edit">Edit</button>
-                  </div>
-                  <div class="input-group " style="margin-top:30px">
-                    <input type="text" class="form-control" placeholder="Comment">
-                    <div class="input-group-append">
-                      <button class="btn btn-success" type="submit">comment</button>
+
+                    <div class="form-inline">
+
+                        <%= bootstrap_form_tag(:model=> @post_comment, html: { multipart: true }) do |f| %>
+                          <div class="input-group input-group-sm">
+                            <span class="input-group" id="basic-addon1">
+                    <%= f.text_field :comment, placeholder: "comment",hide_label: :true  %></span>
+                            <span class="input-group-append" id="basic-addon1">
+                      <%= f.button :submit, label: "Comment", class: " btn btn-success" %></span>
+
+
+                        <% end %>
+
+
                     </div>
-                  </div>
 
                   <%comments = PostComment.where("post_id", post.id ) %>
                   <%comments.each do |comment| %>

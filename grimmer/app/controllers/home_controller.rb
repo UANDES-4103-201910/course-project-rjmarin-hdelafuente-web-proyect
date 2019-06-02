@@ -53,10 +53,49 @@ class HomeController < ApplicationController
     end
   end
 
+  def report
+    @post = Post.find(params[:id])
+    @post_report = PostReport.new
+    respond_to do |format|
+      format.js
+      end
+  end
+  def follow
+    @post = Post.find(params[:id])
+    @post_follow = PostShare.create(post_id: @post.id,user_id: session["warden.user.user.key"][0][0])
+
+
+
+  end
+
 
   def attachments=(files = [])
     attachments.create(attachment: f)
   end
+  def edit
+    @post = Post.find(params[:id])
+
+  end
+
+  def delete_attachment
+    @image = ActiveStorage::Attachment.find(params[:id])
+    puts "---------------------------------------"
+    puts @image
+    puts "---------------------------------------"
+    @image.purge
+    redirect_back(fallback_location: request.referer)
+  end
+
+  def delete
+    @post.destroy
+    respond_to do |format|
+      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
+
+
 
 end
 

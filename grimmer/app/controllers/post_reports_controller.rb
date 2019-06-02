@@ -24,12 +24,14 @@ class PostReportsController < ApplicationController
   # POST /post_reports
   # POST /post_reports.json
   def create
-    @post_report = PostReport.new(post_report_params)
+    @post_report = PostReport.new(user_id: params[:user_id], post_id: params[:post_id], comment_report: params[:post_report][:comment_report])
+
 
     respond_to do |format|
       if @post_report.save
-        format.html { redirect_to @post_report, notice: 'Post report was successfully created.' }
-        format.json { render :show, status: :created, location: @post_report }
+        format.js
+        format.html { redirect_back(fallback_location: root_path) }
+        format.json { render :@post_report, status: :created, location: @post_report }
       else
         format.html { render :new }
         format.json { render json: @post_report.errors, status: :unprocessable_entity }

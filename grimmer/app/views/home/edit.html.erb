@@ -1,0 +1,81 @@
+<%= form_with(model: @post, local: true, multipart: true) do |form| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% @post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+  <div >
+    <%p_a = PostAttachment.where("post_id = ?",@post.id) %>
+    <%p_a.each do| a|%>
+      <% for av in a.avatars do %>
+        <%name = av.blob.filename.to_s %>
+        <%if name.include? "jpg" or name.include? "png" or name.include? "jpeg"%>
+          <div>
+          <%= link_to url_for(av) do%>
+            <%=image_tag( av.variant(resize: "200x200>").processed, style: "margin:7px",:class=>"nav-link" )%>
+            <%= link_to 'Remove', delete_attachment_home_url(av.id),
+                        method: :delete,
+                        remote: true,
+                        data: { confirm: 'Are you sure?' } %>
+              </div>
+          <%end %>
+        <%end %>
+      <%end %>
+      </div>
+      <div>
+        <% for av in a.avatars do %>
+          <%name = av.blob.filename.to_s %>
+          <%if !(name.include? "jpg" or name.include? "png" or name.include? "jpeg")%>
+            <div>
+            <%= link_to(name, rails_blob_path(av, disposition: "attachment"),style: "margin:5px") %>
+            <%= link_to 'Remove', delete_attachment_home_url(av.id),
+            method: :delete,
+                        remote: true,
+            data: { confirm: 'Are you sure?' } %>
+            </div>
+          <%end %>
+
+        <%end %>
+    <%end %>
+
+    </div>
+
+
+
+  <div class="field">
+    <%=form.label  "Only agree files" %>
+    <%= form.fields_for :attachments  do |a| %>
+      <%= a.file_field :attachment, multiple: true %>
+    <%end %>
+  </div>
+
+  <div class="field">
+    <%= form.label :visibility %>
+    <%= form.check_box :visibility %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

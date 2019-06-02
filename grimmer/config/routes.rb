@@ -9,15 +9,20 @@ Rails.application.routes.draw do
   resources :post_shares
   resources :post_comments
   resources :post_attachments
+
   defaults format: :json do
     resources :users, :posts
   end
+  resources :post
   resources :user_profiles
   resources :users
   resources :home do
     member do
       put "like", to: "home#like"
       put "dislike", to: "home#dislike"
+      put "report", to: "home#report"
+      put "follow", to: "home#follow"
+      delete :delete_attachment
     end
   end
   resources :my_posts
