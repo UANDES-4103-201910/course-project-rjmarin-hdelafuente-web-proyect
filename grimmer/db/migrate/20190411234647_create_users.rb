@@ -3,7 +3,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
     create_table :users do |t|
       t.string :email
       t.string :password
-      t.string :type
+      t.integer :roles_mask, default: 1
 
       t.timestamps
     end

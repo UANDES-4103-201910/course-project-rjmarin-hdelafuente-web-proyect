@@ -1,5 +1,5 @@
 class AdminController < ApplicationController
-  def index
+  def show
     dumpster = Dumpster.select("post_id").all
     @dumpster_posts = []
     for post_id in dumpster
@@ -11,5 +11,9 @@ class AdminController < ApplicationController
     for user_id in ids_in_blacklist
       @blacklist.push(User.where("id = ?", user_id))
     end
+  end
+
+  def edit
+    @user = User.find(params[:id])
   end
 end
