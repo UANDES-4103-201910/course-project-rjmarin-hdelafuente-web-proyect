@@ -1,5 +1,5 @@
 class MyPostsController < ApplicationController
   def index
-    @posts = Post.where("user_id = ?", 1) #hay que sacar la credencial por el login
+    @posts = Post.where("user_id = ?", session["warden.user.user.key"][0][0]).reverse
   end
 end

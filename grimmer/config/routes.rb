@@ -24,6 +24,9 @@ Rails.application.routes.draw do
       put "report", to: "home#report"
       put "follow", to: "home#follow"
       delete :delete_attachment
+      delete :delete
+      put "comment", to: "home#comment"
+      get "edit", to: "home#edit"
     end
   end
   resources :my_posts

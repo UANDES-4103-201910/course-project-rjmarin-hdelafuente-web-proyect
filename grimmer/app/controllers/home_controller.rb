@@ -12,15 +12,12 @@ class HomeController < ApplicationController
 
     @post = Post.create(user_id: session["warden.user.user.key"][0][0],title: params[:title],description:params[:description],visibility: params[:public],
                         status: true,city:"Santiago", country: "Chile" )#despues lo seteo con  el current user
-    if @post.save!
-      puts @post
-    end
+
     if params[:attachments]
     @p = PostAttachment.create(post: @post, avatars: params[:attachments][:attachment])
 
-
-    if @p.save!
-      redirect_to "/home"
+    if @post.save!
+      redirect_to root_path
     end
     flash[:error] = "error to create a post"
     end
@@ -67,32 +64,44 @@ class HomeController < ApplicationController
 
 
   end
+  def comment
+    @post = Post.find(params[:post_id])
+    @post_comment = PostComment.create(post_id: @post.id,user_id: session["warden.user.user.key"][0][0], comment: params[:comment])
+    respond_to do |format|
+      format.js
+    end
+
+
+
+  end
 
 
   def attachments=(files = [])
     attachments.create(attachment: f)
   end
+
+
   def edit
     @post = Post.find(params[:id])
+
 
   end
 
   def delete_attachment
     @image = ActiveStorage::Attachment.find(params[:id])
-    puts "---------------------------------------"
-    puts @image
-    puts "---------------------------------------"
     @image.purge
     redirect_back(fallback_location: request.referer)
   end
 
   def delete
+    @post = Post.find(params[:id])
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
+
 
 
 
