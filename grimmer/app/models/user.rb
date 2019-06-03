@@ -7,9 +7,15 @@ class User < ApplicationRecord
          :omniauthable, :trackable, :authentication_keys => {email: true, login: false},
          :omniauth_providers => [:google_oauth2]
 
-  has_many :post, :dependent => :destroy
-  has_one :user_profile, :dependent => :destroy
+  has_many :post,  :dependent => :destroy
+  has_one :user_profile,  :dependent => :destroy
+  has_many :post_comments, :dependent => :destroy
+  has_many :post_shares, :dependent => :destroy
+  has_many :post_votes, :dependent => :destroy
+  has_many :post_reports, :dependent => :destroy
+  has_many :blacklists, :dependent => :destroy
   before_create :check_email
+  after_create :create_profile
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
@@ -58,11 +64,18 @@ class User < ApplicationRecord
 
   private
   def check_email
-    if email =~ /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-      return true
+    if /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i =~ email
+      true
     else
       errors.add(:email, "not a valid email")
-      return false
+      false
+    end
+  end
+
+  def create_profile
+    profile = UserProfile.create(user_id: :id, name: :name)
+    unless profile.save
+      errors.add("Couldn't create profile")
     end
   end
 end

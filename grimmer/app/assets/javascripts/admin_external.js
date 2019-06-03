@@ -19,8 +19,8 @@ function openTab(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 
-$(document).ready(function () {
-    $('.btn btn-sm btn-danger far fa-trash-alt').on('click', function(event) {
-        console.log("holaaaaaaaaaaa");
+$(() => {
+    $(".btn-danger").click(function(event) {
+        $(this).parent().parent().hide();
     });
 });

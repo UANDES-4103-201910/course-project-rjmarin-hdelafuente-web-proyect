@@ -29,7 +29,7 @@ first_names.each {|f|
       people["last_name"] = l
       email_number =rand(3)
       email = f.downcase + l.downcase  + emails[email_number]
-      user = User.create(email:email,password:password,user_type:"user")
+      user = User.create(email:email,password:password, name: f + " " + l)
       city_number = rand(5)
       people["city"] = cities[city_number]
       people["country"] = "Chile"
