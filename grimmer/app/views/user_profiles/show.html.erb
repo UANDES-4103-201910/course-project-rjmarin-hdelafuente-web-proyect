@@ -8,10 +8,14 @@
 </style>
 <div class="container">
   <div class="card-body bg-light">
-
+    <%if !@user_profile.profile_picture %>
+      <%=@user_profile.profile_picture %>
     <div class="fakeimg">
       <p class="text-center">Profile Picture</p>
     </div>
+      <%else %>
+      <%=image_tag( @user_profile.profile_picture.variant(resize: "200x200>").processed, style: "margin:7px",:class=>"nav-link" )%>
+      <%end %>
 
     <p class="text-lg-center" style="font-size: 30px"><%= @user_profile.name %> <%= @user_profile.last_name %></p>
 
