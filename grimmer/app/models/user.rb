@@ -75,7 +75,7 @@ class User < ApplicationRecord
   def create_profile
     profile = UserProfile.create(user_id: :id, name: :name)
     unless profile.save
-      errors.add("Couldn't create profile")
+      errors.add(:profile, "Couldn't create profile")
     end
   end
 end

@@ -101,7 +101,7 @@
           <%= link_to "", user_profile_path(id: user.id), method: :get, class: 'btn btn-sm btn-primary fas fa-eye', title: 'Go to profile' %>
           <%= link_to "", edit_admin_path(id: user.id), method: :get, class: 'btn btn-sm btn-primary far fa-edit', title: 'Edit' %>
           <%= link_to "", blacklist_path(user_id: user.id), method: :post, class: 'btn btn-sm btn-warning fas fa-share-square', title: 'Send to blacklist' %>
-          <%= link_to "", user, method: :delete, class: 'btn btn-sm btn-danger far fa-trash-alt', title: 'Delete User', confirm: 'Are you sure?'%>
+          <%= link_to "", user, :method => :delete, class: 'btn btn-sm btn-danger far fa-trash-alt', title: 'Delete User', confirm: 'Are you sure?'%>
         </td>
       </tr>
     <% end %>

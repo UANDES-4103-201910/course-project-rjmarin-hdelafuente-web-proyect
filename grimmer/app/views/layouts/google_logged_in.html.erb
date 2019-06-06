@@ -37,9 +37,15 @@
         <li class="nav-item">
           <a class="nav-link" href="/home"><i class="fa fa-house"></i>Home <span class="sr-only">(current)</span></a>
         </li>
+
         <li class="nav-item">
+          <% if UserProfile.find_by(user_id: session["warden.user.user.key"][0][0]) %>
             <%= link_to "My Profile", user_profile_path(:id => session["warden.user.user.key"][0][0]), method: :get, :class=>"nav-link" %>
+          <% else %>
+            <%= link_to "Create Profile", new_user_profile_path, :class => "nav-link" %>
+          <% end %>
         </li>
+
         <li class="nav-item">
           <a class="nav-link " href="/my_posts">My Posts</a>
         </li>
