@@ -9,8 +9,7 @@
 <% if @user_profile %>
   <div class="container">
   <div class="card-body bg-light">
-    <%if @user_profile.profile_picture.nil? %>
-      <%=@user_profile.profile_picture %>
+    <%if !@user_profile.profile_picture.attached? %>
     <div class="fakeimg">
       <p class="text-center">Profile Picture</p>
     </div>
@@ -18,11 +17,19 @@
         <%=image_tag( @user_profile.profile_picture.variant(resize: "200x200>").processed, style: "margin:7px",:class=>"nav-link" )%>
     <%end %>
 
-    <p class="text-lg-center" style="font-size: 30px"><%= @user_profile.name %> <%= @user_profile.last_name %></p>
+    <p class="text-lg-center" style="font-size: 30px"><%= @user_profile.name %> <%= @user_profile.last_name %>
+      <br>
+      <br>
+      <%=@vote %><i class="far fa-thumbs-up"></i>
+      <%=@downvote %><i class="far fa-thumbs-down"></i>
+      <%=@commentc %><i class="far fa-comment-alt"></i>
+
+    </p>
 
     <p>
       <strong>Email: </strong>
       <%= @user_profile.user.email %>
+
     </p>
 
   </div>
@@ -50,7 +57,7 @@
     </p>
 
   </div>
-
+  <%if @user_profile.id == session["warden.user.user.key"][0][0]%>
   <div class="card-body bg-light">
     <%= bootstrap_form_tag url: home_index_path, :html => {:multipart => true} do |f| %>
       <div class="form-group " >
@@ -72,6 +79,7 @@
       <div class="actions">
         <%= f.submit "Post" %>
       </div>
+    <%end %>
     <%end %>
   </div>
   <br>
@@ -119,8 +127,17 @@
         <%= link_to  dislike_home_path(post), class: 'downvote  btn btn-sm btn-info', method: :put, remote: true do%>
           <button class="btn btn-sm btn-dislike" id="dislike-post-<%=post.id %>"><%=PostVote.where("post_id = ? AND vote = ?",post.id,false).count %> DisLike</button>
         <%end %>
-        <%= link_to "Edit", edit_home_path(post), method: :get, class: "btn btn-info btn-edit", remote: true %>
+        <%if post.user_id == session["warden.user.user.key"][0][0] %>
+        <%= link_to "Edit", edit_home_path(post), method: :get, class: "btn btn-info btn-edit" %>
         <%= link_to 'Delete Post', delete_home_path(post), :method => :delete, class: "btn btn-info btn-destoy",:confirm => "Are you sure?" %>
+          <%else %>
+          <%= link_to report_home_path(post),method: :put, remote: true, class: " report btn btn-info btn-sm"  do%>
+            <button class="btn btn-sm btn-info">Report</button>
+          <%end %>
+          <%= link_to follow_home_path(post),method: :put, remote: true, class: " follow btn btn-info btn-sm"  do%>
+            <button class="btn btn-sm btn-info">Follow</button>
+          <%end %>
+          <%end %>
 
       </div>
       <div class="form-inline">
@@ -148,7 +165,8 @@
 
             <div class=" card card-body " style="margin-top:10px">
               <%name_user = UserProfile.select("name").where("user_id=?", comment.user_id)[0].name + " " + UserProfile.select("last_name").where("user_id=?", post.user_id)[0].last_name%>
-              <h5><%= link_to name_user, user_profile_path(:id => comment.user_id, method: :get, :class=>"btn-primary" )%>:</h5><%=comment.comment %>
+              <%text = comment.comment.to_s %>
+              <h5><%= link_to name_user, user_profile_path(:id => comment.user_id, method: :get, :class=>"btn-primary" )%>:</h5><%=auto_link_usernames(text)%>
             </div>
 
           <%end %>

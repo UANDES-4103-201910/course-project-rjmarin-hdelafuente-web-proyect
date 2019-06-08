@@ -11,9 +11,11 @@
     </div>
   <% end %>
 
+
+
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.label :username %>
+    <%= form.text_field :username %>
   </div>
 
   <div class="field">
@@ -31,6 +33,18 @@
     <%= form.text_field :country %>
   </div>
 
+
+  <div>
+    <%= link_to url_for( user_profile.profile_picture) do%>
+      <%=image_tag(  user_profile.profile_picture.variant(resize: "200x200>").processed, style: "margin:7px",:class=>"nav-link" )%>
+      <%= link_to 'Remove', delete_attachment_home_url( user_profile.profile_picture.id),
+                  method: :delete,
+                  remote: true,
+                  data: { confirm: 'Are you sure?' } %>
+      </div>
+      <%end %>
+
+  <
   <div class="field">
     <%= form.label :profile_picture %>
     <%= form.file_field :profile_picture %>

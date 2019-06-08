@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_29_142523) do
+ActiveRecord::Schema.define(version: 2019_06_08_035908) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -138,13 +138,14 @@ ActiveRecord::Schema.define(version: 2019_05_29_142523) do
     t.datetime "updated_at", null: false
     t.string "name"
     t.string "last_name"
+    t.string "username"
     t.index ["user_id"], name: "index_user_profiles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password"
-    t.integer "roles_mask", default: 1
+    t.string "user_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "encrypted_password", default: "", null: false
@@ -161,6 +162,7 @@ ActiveRecord::Schema.define(version: 2019_05_29_142523) do
     t.string "oauth_token"
     t.datetime "oauth_expires_at"
     t.string "name"
+    t.string "admin"
     t.string "remember_digest"
     t.string "remember_token"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
