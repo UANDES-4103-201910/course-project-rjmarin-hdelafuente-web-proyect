@@ -128,7 +128,7 @@
               <%= link_to  dislike_home_path(post), class: 'downvote  btn btn-sm btn-info', method: :put, remote: true do%>
                 <button class="btn btn-sm btn-dislike" id="dislike-post-<%=post.id %>"><%=PostVote.where("post_id = ? AND vote = ?",post.id,false).count %> DisLike</button>
               <%end %>
-              <%= link_to "Edit", edit_home_path(post), method: :get, class: "btn btn-info btn-edit", remote: true %>
+              <%= link_to "Edit", edit_home_path(post), method: :get, class: "btn btn-info btn-edit"%>
               <%= link_to 'Delete Post', delete_home_path(post), :method => :delete, class: "btn btn-info btn-destoy",:confirm => "Are you sure?" %>
 
             </div>

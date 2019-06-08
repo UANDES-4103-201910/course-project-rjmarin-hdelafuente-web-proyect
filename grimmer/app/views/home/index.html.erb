@@ -114,7 +114,7 @@
                 <%comments.each do |comment| %>
                 <%if(comment.post_id == post.id) %>
                 <div class=" card card-body " style="margin-top:10px">
-                  <h5><%=UserProfile.select("name").where("user_id =?", comment.user_id)[0].name %> <%=UserProfile.select("last_name").where("user_id =?", comment.user_id)[0].last_name %>:</h5><%=comment.comment %>
+                  <h5><%=UserProfile.select("name").where("user_id =?", comment.user_id)[0].name %> <%=UserProfile.select("last_name").where("user_id =?", comment.user_id)[0].last_name %>:</h5><%=auto_link_usernames(comment.comment) %>
                 </div>
                 <%end %>
                 <%end %>
@@ -165,7 +165,7 @@
                     <%= link_to  dislike_home_path(post), class: 'downvote  btn btn-sm btn-info', method: :put, remote: true do%>
                       <button class="btn btn-sm btn-dislike" id="dislike-post-<%=post.id %>"><%=PostVote.where("post_id = ? AND vote = ?",post.id,false).count %> DisLike</button>
                     <%end %>
-                    <%= link_to "Edit", edit_home_path(post), :method => :get, class: "btn btn-info btn-edit", remote: true %>
+                    <%= link_to "Edit", edit_home_path(post), :method => :get, class: "btn btn-info btn-edit" %>
                     <%= link_to 'Delete Post', delete_home_path(post), :method => :delete, class: "btn btn-info btn-destoy",:confirm => "Are you sure?" %>
 
                   </div>
@@ -195,7 +195,7 @@
 
                       <div class=" card card-body " style="margin-top:10px">
                         <%name_user = UserProfile.select("name").where("user_id=?", comment.user_id)[0].name + " " + UserProfile.select("last_name").where("user_id=?", post.user_id)[0].last_name%>
-                        <h5><%= link_to name_user, user_profile_path(:id => comment.user_id, method: :get, :class=>"btn-primary" )%>:</h5><%=comment.comment %>
+                        <h5><%= link_to name_user, user_profile_path(:id => comment.user_id, method: :get, :class=>"btn-primary" )%>:</h5><%=auto_link_usernames(comment.comment) %>
                       </div>
 
                     <%end %>

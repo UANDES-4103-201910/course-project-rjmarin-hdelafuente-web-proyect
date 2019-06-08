@@ -37,6 +37,8 @@ class PostCommentsController < ApplicationController
     end
   end
 
+
+
   # PATCH/PUT /post_comments/1
   # PATCH/PUT /post_comments/1.json
   def update

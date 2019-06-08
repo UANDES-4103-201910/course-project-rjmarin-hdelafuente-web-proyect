@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :user_profiles
   resources :users
   delete "users/:id", to: "users#destroy"
+  get  "/user_profile/:username" =>"user_profile#username_show"
   resources :home do
     member do
       put "like", to: "home#like"
