@@ -52,7 +52,7 @@
         <li class="nav-item">
           <a class="nav-link " href="/popular_posts">Popular Posts</a>
         </li>
-        <% if User.find_by(id: session["warden.user.user.key"][0][0])#.roles_mask.to_i > 1%>
+        <% if User.find_by(id: session["warden.user.user.key"][0][0]).roles_mask.to_i != 1%>
           <li class="nav-item">
             <%= link_to "Admin Tools", admin_path(:id => session["warden.user.user.key"][0][0]), method: :get, :class =>"nav-link" %>
           </li>
@@ -78,9 +78,8 @@
 </div>
 
 <div class="container" style="margin-top: 30px">
-  <% flash.each do |key, value| %>
-    <div class="alert alert-<%= key %>"><%= value %></div>
-  <% end %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
   <%= yield %>
 </div>
 

@@ -12,7 +12,9 @@ class RegistrationsController < ApplicationController
       end
     else
       @user = User.create(email: params[:email],
-                          password:params[:password])
+                          password:params[:password],
+                          roles_mask: 1)
+
       @user_profile = UserProfile.create(user_id:@user.id,name:params[:name],
                                          last_name: params[last_name],
                                          country:params[:country],
