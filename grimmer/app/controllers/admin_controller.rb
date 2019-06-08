@@ -12,6 +12,13 @@ class AdminController < ApplicationController
     for user_id in ids_in_blacklist
       @blacklist.push(User.find(id: user_id))
     end
+
+    @admins = []
+    for user in @all_users
+      if user.roles_mask != 1
+        @admins.push(user)
+      end
+    end
   end
 
   def edit
