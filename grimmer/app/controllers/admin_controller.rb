@@ -7,10 +7,14 @@ class AdminController < ApplicationController
       @dumpster_posts.push(post)
     end
     @all_users = User.all
-    ids_in_blacklist = Blacklist.select("user_id").all
+    ids_in_blacklist = Blacklist.all
     @blacklist = []
-    for user_id in ids_in_blacklist
-      @blacklist.push(User.find(id: user_id))
+    for bl in ids_in_blacklist
+      row = []
+      a = User.find_by(id: bl.user_id)
+      row.push(a)
+      row.push(bl.id)
+      @blacklist.push(row)
     end
 
     @admins = []
