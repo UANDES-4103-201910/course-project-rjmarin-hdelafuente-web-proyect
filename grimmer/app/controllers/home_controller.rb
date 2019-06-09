@@ -10,20 +10,19 @@ class HomeController < ApplicationController
   def create
 
     @post = Post.create(user_id: session["warden.user.user.key"][0][0],title: params[:title],description:params[:description],visibility: params[:public],
-                        status: true,city:"Santiago", country: "Chile" )#despues lo seteo con  el current user
+                        status: true,city:"Santiago", country: "Chile" )
 
     if params[:attachments]
     @p = PostAttachment.create(post: @post, avatars: params[:attachments][:attachment])
     end
 
     if @post.save!
-      puts "aquiii po qlll"
       redirect_to "/home"
     end
     flash[:error] = "error to create a post"
     end
 
-  
+
 
   def like
     @post = Post.find(params[:id])
