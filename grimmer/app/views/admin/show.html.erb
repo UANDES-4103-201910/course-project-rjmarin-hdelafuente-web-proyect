@@ -79,7 +79,7 @@
             <td><%= owner_user.email %></td>
             <td>
               <%= link_to "", post_path(id: post.id), :method => :get, title: "Go to Post", class: "btn btn-sm btn-primary fas fa-eye" %>
-              <a class="btn btn-sm btn-primary fas fa-share-square" title="Make visible again"></a>
+              <%= link_to "", dumpster_path(post_id: post.id), :method => :delete, title: "Make visible again", class: 'btn btn-sm btn-primary fas fa-share-square' %>
               <%= link_to "", post_path(id: post.id), :method => :delete, title: "Delete Post", class: "btn btn-sm btn-danger far fa-trash-alt" %>
             </td>
             <% end %>

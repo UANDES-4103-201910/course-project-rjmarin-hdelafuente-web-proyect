@@ -26,6 +26,10 @@ class PostReportsController < ApplicationController
   def create
     @post_report = PostReport.new(user_id: params[:user_id], post_id: params[:post_id], comment_report: params[:post_report][:comment_report])
 
+    c = PostReport.where("post_id = ?", params[:post_id]).count()
+    if c > 3
+      Dumpster.create(post_id: params[:post_id]).save
+    end
 
     respond_to do |format|
       if @post_report.save

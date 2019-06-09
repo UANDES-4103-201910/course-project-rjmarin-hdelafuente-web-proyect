@@ -1,9 +1,1 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Post:</strong>
-  <%= @dumpster.post %>
-</p>
-
-<%= link_to 'Edit', edit_dumpster_path(@dumpster) %> |
-<%= link_to 'Back', dumpsters_path %>
+<%= link_to "Back", admin_path(id: session['warden.user.user.key'][0][0]), class: 'nav-link' %>

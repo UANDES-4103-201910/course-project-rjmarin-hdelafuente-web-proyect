@@ -60,7 +60,7 @@ class BlacklistsController < ApplicationController
       format.html { redirect_to blacklists_url, notice: 'Blacklist was successfully destroyed.' }
       format.json { head :no_content }
     end
-    redirect_to admin_path
+    #redirect_to admin_path
   end
 
   private
