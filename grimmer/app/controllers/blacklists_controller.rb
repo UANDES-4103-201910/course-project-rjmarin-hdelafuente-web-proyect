@@ -15,6 +15,7 @@ class BlacklistsController < ApplicationController
   # GET /blacklists/new
   def new
     @blacklist = Blacklist.new
+    @all_users = User.all
   end
 
   # GET /blacklists/1/edit
@@ -59,6 +60,7 @@ class BlacklistsController < ApplicationController
       format.html { redirect_to blacklists_url, notice: 'Blacklist was successfully destroyed.' }
       format.json { head :no_content }
     end
+    redirect_to admin_path
   end
 
   private
