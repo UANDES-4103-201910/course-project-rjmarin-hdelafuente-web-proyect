@@ -39,6 +39,7 @@
 
 
   <div>
+    <% if @user_profile.profile_picture.attached? %>
     <%= link_to url_for( user_profile.profile_picture) do%>
       <%=image_tag(  user_profile.profile_picture.variant(resize: "200x200>").processed, style: "margin:7px",:class=>"nav-link" )%>
       <%= link_to 'Remove', delete_attachment_home_url( user_profile.profile_picture.id),
@@ -47,8 +48,9 @@
                   data: { confirm: 'Are you sure?' } %>
       </div>
       <%end %>
+      <%end %>
 
-  <
+
   <div class="field">
     <%= form.label :profile_picture %>
     <%= form.file_field :profile_picture %>
