@@ -3,18 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="49dec17b-2daa-45a5-89bb-e805afa41ad4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/controllers/dumpsters_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/controllers/dumpsters_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/controllers/post_reports_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/controllers/post_reports_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/helpers/user_profiles_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/helpers/user_profiles_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/views/admin/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/views/admin/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/views/dumpsters/_dumpster.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/views/dumpsters/_form.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/views/dumpsters/edit.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/views/dumpsters/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/views/dumpsters/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/views/dumpsters/index.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/views/dumpsters/new.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/views/dumpsters/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/views/dumpsters/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/views/dumpsters/show.json.jbuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grimmer/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/db/schema.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,29 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grimmer/app/views/admin/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
+            <state relative-caret-position="349">
               <caret line="81" column="81" selection-start-line="81" selection-start-column="81" selection-end-line="81" selection-end-column="81" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/dumpsters_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/post_reports_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="28" column="65" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -240,7 +211,7 @@
               <item name="course-project-rjmarin-hdelafuente-web-proyect" type="b2602c69:ProjectViewProjectNode" />
               <item name="course-project-rjmarin-hdelafuente-web-proyect" type="462c0819:PsiDirectoryNode" />
               <item name="grimmer" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -450,12 +421,12 @@
       <workItem from="1559739686153" duration="493000" />
       <workItem from="1559742142492" duration="41000" />
       <workItem from="1559826448897" duration="1572000" />
-      <workItem from="1559918905152" duration="21413000" />
+      <workItem from="1559918905152" duration="22161000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106121000" />
+    <option name="totallyTimeSpent" value="106869000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -470,13 +441,13 @@
     <frame x="52" y="23" width="1388" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49879518" visible="true" weight="0.19539376" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49879518" visible="true" weight="0.19539376" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50120485" side_tool="true" weight="0.18597998" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32866243" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49861342" weight="0.29808918" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4997227" visible="true" weight="0.39745224" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4997227" weight="0.39745224" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3296371" />
@@ -520,30 +491,6 @@
     <SUITE FILE_PATH="coverage/course_project_rjmarin_hdelafuente_web_proyect@Development__grimmer.rcov" NAME="Development: grimmer Coverage Results" MODIFIED="1560051376180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grimmer" MODULE_NAME="grimmer" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grimmer/app/views/posts/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/config/environment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grimmer/config/initializers/devise.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -820,13 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/views/admin/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="81" column="81" selection-start-line="81" selection-start-column="81" selection-end-line="81" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grimmer/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -856,6 +796,13 @@
     <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/post_reports_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/dumpsters_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -863,10 +810,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/post_reports_controller.rb">
+    <entry file="file://$PROJECT_DIR$/grimmer/config/storage.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/db/migrate/20190609051935_add_latitude_and_logitude_columns_to_geofences.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/config/master.key">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/config/credentials.yml.enc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/views/admin/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="28" column="65" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
+        <state relative-caret-position="349">
+          <caret line="81" column="81" selection-start-line="81" selection-start-column="81" selection-end-line="81" selection-end-column="81" />
         </state>
       </provider>
     </entry>
