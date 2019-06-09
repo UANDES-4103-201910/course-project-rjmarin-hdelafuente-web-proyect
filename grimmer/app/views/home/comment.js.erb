@@ -1,7 +1,9 @@
+
+
 $(document).ready(function () {
     $('.post-comment').click(function () {
         var txt = "<div class=\" card card-body \" style=\"margin-top:10px\">";
-        var txt1 ="<h5><%=UserProfile.select('name').where('user_id =?', @post_comment.user_id)[0].name %> <%=UserProfile.select('last_name').where('user_id =?', @post_comment.user_id)[0].last_name %>:</h5><%=auto_link_username(@post_comment.comment) %>";
+        var txt1 ="<h5><%=UserProfile.select('name').where('user_id =?', @post_comment.user_id)[0].name %> <%=UserProfile.select('last_name').where('user_id =?', @post_comment.user_id)[0].last_name %>:</h5><%=@post_comment.comment %>";
         var txt2 = "</div>";
         txt = txt.concat(txt1,txt2)
        $("#post-comment-<%=@post.id%>").append(txt);

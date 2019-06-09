@@ -1,8 +1,12 @@
 module HomeHelper
 
+
   def auto_link_usernames(text)
     text.gsub /(?<=\s|^)@[A-Za-z0-9_]+(?=\b)/ do |username|
-      link_to(username, user_profile_path(username.gsub('@', '')))
+      @user_profile = UserProfile.where("username = ?" , username.gsub('@','')).first
+      if @user_profile
+        link_to(username, user_profile_path(@user_profile), :class => "btn-link inline-button")
+      end
     end.html_safe
-   end
+  end
 end
