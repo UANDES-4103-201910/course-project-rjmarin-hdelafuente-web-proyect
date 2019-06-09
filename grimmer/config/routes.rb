@@ -32,6 +32,7 @@ Rails.application.routes.draw do
       get "edit_comment", to: "home#edit_comment"
     end
   end
+  resources :search
   resources :my_posts
   resources :popular_posts
   resources :admin
