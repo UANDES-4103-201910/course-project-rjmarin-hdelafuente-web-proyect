@@ -81,6 +81,7 @@
                     <%if comment.user_id ==session["warden.user.user.key"][0][0]  %>
                       <div>
                         <%= link_to "Edit", edit_comment_home_path(comment), :method => :get, class: "btn btn-sm btn-info float-right" %>
+                        <%= link_to "Delete", delete_comment_home_path(comment), :method => :delete, class: "btn btn-sm btn-info float-right",:confirm => "Are you sure?" %>
                       </div>
                     <%end %>
                   </div>
@@ -167,6 +168,7 @@
                     <%if comment.user_id ==session["warden.user.user.key"][0][0]  %>
                       <div>
                         <%= link_to "Edit", edit_comment_home_path(comment), :method => :get, class: "btn btn-sm btn-info float-right" %>
+                        <%= link_to "Delete", delete_comment_home_path(comment), :method => :delete, class: "btn btn-sm btn-info float-right",:confirm => "Are you sure?" %>
                       </div>
                     <%end %>
                   </div>
