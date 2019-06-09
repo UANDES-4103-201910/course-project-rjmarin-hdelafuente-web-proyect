@@ -5,8 +5,11 @@ $(document).ready(function () {
         var txt = "<div class=\" card card-body \" style=\"margin-top:10px\">";
         var txt1 ="<h5><%=UserProfile.select('name').where('user_id =?', @post_comment.user_id)[0].name %> <%=UserProfile.select('last_name').where('user_id =?', @post_comment.user_id)[0].last_name %>:</h5><%=@post_comment.comment %>";
         var txt2 = "</div>";
-        txt = txt.concat(txt1,txt2)
-       $("#post-comment-<%=@post.id%>").append(txt);
+        txt = txt.concat(txt1,txt2);
+        var txt1 ="<%= link_to "Edit", edit_comment_home_path(@post_comment), :method => :get, class: "btn btn-sm btn-info float-right" %>";
+        var txt3 ="<%= link_to "Delete", delete_comment_home_path(@post_comment), :method => :delete, class: "btn btn-sm btn-info float-right",:confirm => "Are you sure?" %>";
+        txt = txt.concat(txt2,txt1,txt3,txt2) ;
+        $("#post-comment-<%=@post.id%>").append(txt);
        $(".comment-field").attr("palceholder", "Comment").placeholder();
     });
 });

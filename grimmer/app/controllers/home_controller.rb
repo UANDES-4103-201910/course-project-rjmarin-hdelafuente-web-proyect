@@ -9,20 +9,21 @@ class HomeController < ApplicationController
 
   def create
 
-
     @post = Post.create(user_id: session["warden.user.user.key"][0][0],title: params[:title],description:params[:description],visibility: params[:public],
                         status: true,city:"Santiago", country: "Chile" )#despues lo seteo con  el current user
 
     if params[:attachments]
     @p = PostAttachment.create(post: @post, avatars: params[:attachments][:attachment])
+    end
 
     if @post.save!
-      redirect_to root_path
+      puts "aquiii po qlll"
+      redirect_to "/home"
     end
     flash[:error] = "error to create a post"
     end
 
-  end
+  
 
   def like
     @post = Post.find(params[:id])
@@ -61,18 +62,14 @@ class HomeController < ApplicationController
     @post = Post.find(params[:id])
     @post_follow = PostShare.create(post_id: @post.id,user_id: session["warden.user.user.key"][0][0])
 
-
-
   end
+
   def comment
     @post = Post.find(params[:post_id])
     @post_comment = PostComment.create(post_id: @post.id,user_id: session["warden.user.user.key"][0][0], comment: params[:comment])
     respond_to do |format|
       format.js
     end
-
-
-
   end
 
 
@@ -86,8 +83,6 @@ class HomeController < ApplicationController
   end
   def edit_comment
     @post_comment = PostComment.find(params[:id])
-
-
   end
 
   def delete_attachment
@@ -105,9 +100,14 @@ class HomeController < ApplicationController
     end
   end
 
-
-
-
+  def delete_comment
+    @comment = PostComment.find(params[:id])
+    @comment.destroy
+    respond_to do |format|
+      format.html { redirect_to root_path, notice: 'Comment was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
 
 
 end

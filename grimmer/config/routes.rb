@@ -26,6 +26,7 @@ Rails.application.routes.draw do
       put "follow", to: "home#follow"
       delete :delete_attachment
       delete :delete
+      delete :delete_comment
       put "comment", to: "home#comment"
       get "edit", to: "home#edit"
       get "edit_comment", to: "home#edit_comment"
