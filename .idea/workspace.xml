@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49dec17b-2daa-45a5-89bb-e805afa41ad4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/grimmer/app/controllers/admin_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/controllers/admin_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grimmer/app/controllers/blacklists_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/controllers/blacklists_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/views/admin/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/views/admin/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/views/blacklists/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/views/blacklists/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/views/blacklists/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/views/blacklists/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/app/views/blacklists/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/views/blacklists/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grimmer/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grimmer/app/views/blacklists/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/views/blacklists/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grimmer/app/views/user_profiles/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/grimmer/app/views/user_profiles/show.html.erb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,26 +42,17 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grimmer/app/views/blacklists/new.html.erb">
+        <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/blacklists_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="21" selection-start-column="21" selection-end-column="21" />
+            <state relative-caret-position="438">
+              <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grimmer/app/views/blacklists/show.html.erb">
+        <entry file="file://$PROJECT_DIR$/grimmer/app/views/blacklists/index.html.erb">
           <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/blacklists_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
-            </state>
-          </provider>
         </entry>
       </file>
     </leaf>
@@ -91,7 +79,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/grimmer/app/controllers/my_posts_controller.rb" />
         <option value="$PROJECT_DIR$/grimmer/app/views/admin/admin_home.html.erb" />
         <option value="$PROJECT_DIR$/grimmer/app/views/my_posts/index.html.erb" />
         <option value="$PROJECT_DIR$/grimmer/db/migrate/20190526212332_add_devise_to_users.rb" />
@@ -124,7 +111,6 @@
         <option value="$PROJECT_DIR$/grimmer/app/views/admin/show_post.html.erb" />
         <option value="$PROJECT_DIR$/grimmer/app/controllers/posts_controller.rb" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/grimmer/app/views/user_profiles/show.html.erb" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/682dc137-5c3b-4b53-a11e-0edb983c98d3/console.sql" />
         <option value="$PROJECT_DIR$/grimmer/app/controllers/callbacks_controller.rb" />
         <option value="$PROJECT_DIR$/grimmer/app/views/users/_form.html.erb" />
@@ -140,8 +126,10 @@
         <option value="$PROJECT_DIR$/grimmer/app/views/blacklists/_form.html.erb" />
         <option value="$PROJECT_DIR$/grimmer/app/controllers/admin_controller.rb" />
         <option value="$PROJECT_DIR$/grimmer/app/views/admin/show.html.erb" />
-        <option value="$PROJECT_DIR$/grimmer/app/controllers/blacklists_controller.rb" />
         <option value="$PROJECT_DIR$/grimmer/app/views/blacklists/show.html.erb" />
+        <option value="$PROJECT_DIR$/grimmer/app/views/user_profiles/show.html.erb" />
+        <option value="$PROJECT_DIR$/grimmer/app/controllers/blacklists_controller.rb" />
+        <option value="$PROJECT_DIR$/grimmer/app/views/blacklists/index.html.erb" />
       </list>
     </option>
   </component>
@@ -231,6 +219,13 @@
               <item name="course-project-rjmarin-hdelafuente-web-proyect" type="462c0819:PsiDirectoryNode" />
               <item name="grimmer" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="course-project-rjmarin-hdelafuente-web-proyect" type="b2602c69:ProjectViewProjectNode" />
+              <item name="course-project-rjmarin-hdelafuente-web-proyect" type="462c0819:PsiDirectoryNode" />
+              <item name="grimmer" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -240,6 +235,14 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="blacklists" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="course-project-rjmarin-hdelafuente-web-proyect" type="b2602c69:ProjectViewProjectNode" />
+              <item name="course-project-rjmarin-hdelafuente-web-proyect" type="462c0819:PsiDirectoryNode" />
+              <item name="grimmer" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="user_profiles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="course-project-rjmarin-hdelafuente-web-proyect" type="b2602c69:ProjectViewProjectNode" />
@@ -461,12 +464,12 @@
       <workItem from="1559739686153" duration="493000" />
       <workItem from="1559742142492" duration="41000" />
       <workItem from="1559826448897" duration="1572000" />
-      <workItem from="1559918905152" duration="16396000" />
+      <workItem from="1559918905152" duration="17297000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101104000" />
+    <option name="totallyTimeSpent" value="102005000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -487,7 +490,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49861342" weight="0.29808918" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4997227" visible="true" weight="0.39745224" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4997227" weight="0.39745224" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3296371" />
@@ -528,16 +531,9 @@
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/course_project_rjmarin_hdelafuente_web_proyect@Development__grimmer.rcov" NAME="Development: grimmer Coverage Results" MODIFIED="1560027371335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grimmer" MODULE_NAME="grimmer" />
+    <SUITE FILE_PATH="coverage/course_project_rjmarin_hdelafuente_web_proyect@Development__grimmer.rcov" NAME="Development: grimmer Coverage Results" MODIFIED="1560051376180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grimmer" MODULE_NAME="grimmer" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grimmer/app/views/users/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="22" column="93" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grimmer/db/migrate/20190412000137_create_posts.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -618,13 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="33" selection-start-column="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/views/user_profiles/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -803,13 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/views/layouts/google_logged_in.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="35" column="30" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grimmer/app/views/users/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -821,13 +803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/blacklists_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -864,13 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/admin_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grimmer/app/views/blacklists/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -878,7 +846,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/views/user_profiles/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/views/layouts/google_logged_in.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-177">
+          <caret line="35" column="30" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/admin_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grimmer/app/views/blacklists/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/controllers/blacklists_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grimmer/app/views/blacklists/index.html.erb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
