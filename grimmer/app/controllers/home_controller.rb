@@ -83,6 +83,9 @@ class HomeController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+  end
+  def edit_comment
+    @post_comment = PostComment.find(params[:id])
 
 
   end

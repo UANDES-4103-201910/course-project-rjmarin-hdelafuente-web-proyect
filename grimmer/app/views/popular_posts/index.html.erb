@@ -77,7 +77,12 @@
                 <%if(comment.post_id == post.id) %>
                   <div class=" card card-body " style="margin-top:10px">
 
-                    <h5><%=UserProfile.select("name").where("user_id =?", comment.user_id)[0].name %> <%=UserProfile.select("last_name").where("user_id =?", comment.user_id)[0].last_name %>:</h5><%=comment.comment %>
+                    <h5><%=UserProfile.select("name").where("user_id =?", comment.user_id)[0].name %> <%=UserProfile.select("last_name").where("user_id =?", comment.user_id)[0].last_name %>:</h5><%=auto_link_usernames(comment.comment) %>
+                    <%if comment.user_id ==session["warden.user.user.key"][0][0]  %>
+                      <div>
+                        <%= link_to "Edit", edit_comment_home_path(comment), :method => :get, class: "btn btn-sm btn-info float-right" %>
+                      </div>
+                    <%end %>
                   </div>
                 <%end %>
               <%end %>
@@ -158,7 +163,12 @@
 
                   <div class=" card card-body " style="margin-top:10px">
                     <%name_user = UserProfile.select("name").where("user_id=?", comment.user_id)[0].name + " " + UserProfile.select("last_name").where("user_id=?", post.user_id)[0].last_name%>
-                    <h5><%= link_to name_user, user_profile_path(:id => comment.user_id, method: :get, :class=>"btn-primary" )%>:</h5><%=comment.comment %>
+                    <h5><%= link_to name_user, user_profile_path(:id => comment.user_id, method: :get, :class=>"btn-primary" )%>:</h5><%=auto_link_usernames(comment.comment) %>
+                    <%if comment.user_id ==session["warden.user.user.key"][0][0]  %>
+                      <div>
+                        <%= link_to "Edit", edit_comment_home_path(comment), :method => :get, class: "btn btn-sm btn-info float-right" %>
+                      </div>
+                    <%end %>
                   </div>
 
                 <%end %>

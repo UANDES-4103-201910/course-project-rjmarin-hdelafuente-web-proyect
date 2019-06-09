@@ -28,6 +28,7 @@ Rails.application.routes.draw do
       delete :delete
       put "comment", to: "home#comment"
       get "edit", to: "home#edit"
+      get "edit_comment", to: "home#edit_comment"
     end
   end
   resources :my_posts
