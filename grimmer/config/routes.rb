@@ -30,6 +30,7 @@ Rails.application.routes.draw do
       put "comment", to: "home#comment"
       get "edit", to: "home#edit"
       get "edit_comment", to: "home#edit_comment"
+      get "map", to: "home#map"
     end
   end
   resources :my_posts

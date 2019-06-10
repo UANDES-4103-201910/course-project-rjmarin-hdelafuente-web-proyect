@@ -44,13 +44,15 @@
             <div class="card-header">
                 <h6 style="text-align: right"><%= post.updated_at%></h6>
                 <div>
+                  <%=link_to map_home_path(post), method: :get do %>
                     <button class="btn btn-link" style="float: right">location</button>
+                    <%end %>
                   <%name_user = UserProfile.select("name").where("user_id=?", post.user_id)[0].name + " " + UserProfile.select("last_name").where("user_id=?", post.user_id)[0].last_name%>
                     <h5><%= link_to name_user, user_profile_path(:id => post.user_id, method: :get, :class=>"btn-primary" )%></h5>
                 </div>
             </div>
             <div class="card-body bg-light">
-                <h2><%= post.title%></h2>
+                <h2><%= post.title%> </h2>
                 <p><%=post.description %></p>
                 <div >
                     <%p_a = PostAttachment.where("post_id = ?",post.id) %>
@@ -131,7 +133,9 @@
               <div class="card-header">
                 <h6 style="text-align: right"><%= post.updated_at%></h6>
                 <div>
-                  <button class="btn btn-link" style="float: right">location</button>
+                  <%=link_to map_home_path(post), method: :get do %>
+                    <button class="btn btn-link" style="float: right">location</button>
+                  <%end %>
                   <% name_user = UserProfile.select("name").where("user_id=?", post.user_id)[0].name.to_s + " " + UserProfile.select("last_name").where("user_id=?", post.user_id)[0].last_name%>
                   <h5><%= link_to name_user, user_profile_path(:id => post.user_id, method: :get, :class=>"btn-primary" )%></h5>
                 </div>

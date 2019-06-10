@@ -1,0 +1,25 @@
+<div style='width: 800px;'>
+    <div id="map" style='width: 800px; height: 400px;'></div>
+
+
+</div>
+
+<script>
+    function initMap() {
+
+        var uluru = {lat: 0, lng: 0};
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 14, center: uluru});
+        var marker = new google.maps.Marker({position: uluru, map: map});
+    }
+</script>
+<style>
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+</style>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUgEHrNWIUC-GBayNiJrJZ9_yC3hdWd2Q&callback=initMap">
+</script>

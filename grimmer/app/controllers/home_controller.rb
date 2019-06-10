@@ -71,6 +71,12 @@ class HomeController < ApplicationController
     end
   end
 
+  def map
+    @post = Post.find(params[:id])
+
+
+  end
+
 
   def attachments=(files = [])
     attachments.create(attachment: f)
