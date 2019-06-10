@@ -48,8 +48,8 @@ GEM
       io-like (~> 0.3.0)
     arel (9.0.0)
     aws-eventstream (1.0.3)
-    aws-partitions (1.169.0)
-    aws-sdk-core (3.54.0)
+    aws-partitions (1.173.0)
+    aws-sdk-core (3.54.2)
       aws-eventstream (~> 1.0, >= 1.0.2)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.1)
@@ -57,13 +57,13 @@ GEM
     aws-sdk-kms (1.21.0)
       aws-sdk-core (~> 3, >= 3.53.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.41.0)
+    aws-sdk-s3 (1.42.0)
       aws-sdk-core (~> 3, >= 3.53.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.1)
     aws-sigv4 (1.1.0)
       aws-eventstream (~> 1.0, >= 1.0.2)
-    bcrypt (3.1.12)
+    bcrypt (3.1.13)
     bindex (0.7.0)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
@@ -97,7 +97,7 @@ GEM
     crass (1.0.4)
     debase (0.2.2)
       debase-ruby_core_source (>= 0.10.2)
-    debase-ruby_core_source (0.10.4)
+    debase-ruby_core_source (0.10.5)
     devise (4.6.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -161,7 +161,7 @@ GEM
     omniauth (1.9.0)
       hashie (>= 3.4.6, < 3.7.0)
       rack (>= 1.6.2, < 3)
-    omniauth-google-oauth2 (0.6.1)
+    omniauth-google-oauth2 (0.7.0)
       jwt (>= 2.0)
       omniauth (>= 1.1.1)
       omniauth-oauth2 (>= 1.5)
@@ -306,4 +306,4 @@ RUBY VERSION
    ruby 2.6.0p0
 
 BUNDLED WITH
-   1.17.2
+   1.17.3

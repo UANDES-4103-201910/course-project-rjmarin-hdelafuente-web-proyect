@@ -33,6 +33,7 @@ Rails.application.routes.draw do
       get "map", to: "home#map"
     end
   end
+  resources :search
   resources :my_posts
   resources :popular_posts
   resources :admin

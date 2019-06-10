@@ -62,10 +62,12 @@
         <% end %>
       </ul>
 
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      <div id="search-bar">
+        <%= form_tag search_path(id: session['warden.user.user.key'][0][0]), :method => :get do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search something..."%>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <% end %>
+      </div>
       <%= link_to "Log Out", log_out_path, method: :delete, :class=>"nav-link" %>
   <%end %>
 
