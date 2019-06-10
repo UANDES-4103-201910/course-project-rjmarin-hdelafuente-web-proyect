@@ -56,8 +56,17 @@ ActiveRecord::Schema.define(version: 2019_06_10_205130) do
     t.index ["post_id"], name: "index_dumpsters_on_post_id"
   end
 
-# Could not dump table "geofences" because of following StandardError
-#   Unknown type 'post' for column 'post_id'
+  create_table "geofences", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "region"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.decimal "latitude"
+    t.decimal "longitude"
+    t.integer "post_id"
+    t.index ["post_id"], name: "index_geofences_on_post_id"
+    t.index ["user_id"], name: "index_geofences_on_user_id"
+  end
 
   create_table "post_attachments", force: :cascade do |t|
     t.integer "post_id"
