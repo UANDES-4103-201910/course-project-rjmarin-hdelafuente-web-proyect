@@ -36,7 +36,16 @@
   <div class="card-body bg-light" style="margin-top: 20px">
 
     <%= button_to 'Edit Info', edit_user_profile_path(@user_profile), :class => "btn btn-sm btn-outline-primary", :method => "get"%>
+    <%geo = Geofence.where("user_id = ?", @user_profile.id).first %>
+    <br>
+    <div sytle="display:flex-container">
+    <%if geo %>
+        <div style="float: left">
+      <div id="map" style='width: 400px; height: 200px;'></div>
+        </div>
 
+      <%end %>
+    <div >
     <p class="text-center">
       <strong>About me</strong>
       <br>
@@ -54,7 +63,9 @@
       <br>
       <%= @user_profile.country %>
     </p>
-
+    </div>
+    </div>
+  <br>
   </div>
   <%if @user_profile.id == session["warden.user.user.key"][0][0]%>
   <div class="card-body bg-light">
@@ -86,7 +97,12 @@
   <div class="card-header">
     <h6 style="text-align: right"><%= post.updated_at%></h6>
     <div>
-      <button class="btn btn-link" style="float: right">location</button>
+      <%geo = Geofence.where("user_id = ?", @user_profile.id).first %>
+      <%if geo %>
+        <%=link_to map_home_path(post), method: :get do %>
+          <button class="btn btn-link" style="float: right"><%=geo.region %></button>
+        <%end %>
+      <%end %>
       <%name_user = UserProfile.select("name").where("user_id=?", post.user_id)[0].name + " " + UserProfile.select("last_name").where("user_id=?", post.user_id)[0].last_name%>
       <h5><%= link_to name_user, user_profile_path(:id => post.user_id, method: :get, :class=>"btn-primary" )%></h5>
     </div>
@@ -188,3 +204,35 @@
   <strong> hola!</strong>
 
 <% end %>
+<script>
+    function initMap() {
+        <%geo = Geofence.where("user_id = ?", @user_profile.id).first %>
+        <%if geo %>
+        <%lat = geo.latitude %>
+        <%lng = geo.longitude %>
+        var myCoords = new google.maps.LatLng(<%=lat %>, <%=lng %>);
+        var mapOptions = {
+            center: myCoords,
+            zoom: 14
+        };
+        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        var marker = new google.maps.Marker({
+            position: myCoords,
+            animation: google.maps.Animation.DROP,
+            map: map,
+            draggable: true
+        });
+        <%end %>
+    }
+
+</script>
+<style>
+  #map {
+    height: 200px;
+    width: 100%;
+  }
+</style>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_AvqTAYSLAaa0Xd3FzNTfWG03cQWRpN4&callback=initMap">
+</script>

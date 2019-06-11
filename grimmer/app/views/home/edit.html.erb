@@ -70,6 +70,18 @@
     <%= form.label :visibility %>
     <%= form.check_box :visibility %>
   </div>
+    <br>
+    <%geo= Geofence.where("post_id = ?" , params[:id]).first %>
+    <%if geo %>
+    <div>
+      <%=link_to "edit location", edit_geofence_path(geo,:post_id =>@post.id) %>
+    </div>
+      <%else %>
+      <div>>
+      <%=link_to "Add location", new_geofence_path(:post_id =>@post.id) %>
+      </div>
+      <%end %>
+    <br>
 
   <div class="actions">
     <%= form.submit %>

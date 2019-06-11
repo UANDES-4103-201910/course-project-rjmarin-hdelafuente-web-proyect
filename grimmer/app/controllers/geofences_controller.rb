@@ -24,17 +24,34 @@ class GeofencesController < ApplicationController
   # POST /geofences
   # POST /geofences.json
   def create
-    @geofence = Geofence.new(geofence_params)
+    session[:return_to] ||= request.referer
+    param = params[:geofence]
+    @geofence = Geofence.new(user_id: param[:user_id], post_id: param[:post_id], latitude: param[:latitude],
+                             longitude: param[:longitude],region: param[:region])
+    if param[:post_id] != ""
+    post = Post.find(param[:post_id])
 
     respond_to do |format|
       if @geofence.save
-        format.html { redirect_to @geofence, notice: 'Geofence was successfully created.' }
+        format.html { redirect_to edit_home_path(post) , notice: 'Geofence was successfully created.' }
         format.json { render :show, status: :created, location: @geofence }
       else
         format.html { render :new }
         format.json { render json: @geofence.errors, status: :unprocessable_entity }
       end
     end
+    else
+      @user_profile = UserProfile.find(session["warden.user.user.key"][0][0])
+      respond_to do |format|
+        if @geofence.save
+          format.html { redirect_to edit_user_profile_path(@user_profile) , notice: 'Geofence was successfully created.' }
+          format.json { render :show, status: :created, location: @geofence }
+        else
+          format.html { render :new }
+          format.json { render json: @geofence.errors, status: :unprocessable_entity }
+        end
+      end
+      end
   end
 
   # PATCH/PUT /geofences/1
@@ -42,8 +59,16 @@ class GeofencesController < ApplicationController
   def update
     respond_to do |format|
       if @geofence.update(geofence_params)
-        format.html { redirect_to @geofence, notice: 'Geofence was successfully updated.' }
+        if params[:geofence][:post_id] != ""
+        post = Post.find(params[:geofence][:post_id])
+        format.html { redirect_to edit_home_path(post), notice: 'Geofence was successfully updated.' }
         format.json { render :show, status: :ok, location: @geofence }
+        else
+          @user_profile = UserProfile.find(session["warden.user.user.key"][0][0])
+          format.html { redirect_to edit_user_profile_path(@user_profile), notice: 'Geofence was successfully updated.' }
+          format.json { render :show, status: :ok, location: @geofence }
+          end
+
       else
         format.html { render :edit }
         format.json { render json: @geofence.errors, status: :unprocessable_entity }
@@ -69,6 +94,6 @@ class GeofencesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def geofence_params
-      params.require(:geofence).permit(:user_id, :region)
+      params.require(:geofence).permit(:user_id, :region, :latitude, :longitude, :post_id)
     end
 end

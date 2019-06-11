@@ -3,7 +3,12 @@
     <div class="card-header">
       <h6 style="text-align: right"><%= post.updated_at%></h6>
       <div>
-        <button class="btn btn-link" style="float: right">location</button>
+        <%geo = Geofence.where("post_id = ?", post.id).first %>
+        <%if geo %>
+          <%=link_to map_home_path(post), method: :get do %>
+            <button class="btn btn-link" style="float: right"><%=geo.region %></button>
+          <%end %>
+        <%end %>
         <%name_user = UserProfile.select("name").where("user_id=?", post.user_id)[0].name + " " + UserProfile.select("last_name").where("user_id=?", post.user_id)[0].last_name%>
         <h5><%= link_to name_user, user_profile_path(:id => post.user_id, method: :get, :class=>"btn-primary" )%></h5>
       </div>

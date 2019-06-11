@@ -56,10 +56,18 @@
     <%= form.file_field :profile_picture %>
   </div>
 
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location %>
-  </div>
+    <br>
+    <%geo= Geofence.where("user_id = ?" , params[:id]).first %>
+    <%if geo %>
+      <div>
+        <%=link_to "edit location", edit_geofence_path(geo) %>
+      </div>
+    <%else %>
+      <div>
+        <%=link_to "Add location", new_geofence_path %>
+      </div>
+    <%end %>
+    <br>
 
   <div class="field">
     <%= form.label :name %>
